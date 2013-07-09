@@ -463,6 +463,12 @@
   font-size: 1em;
   margin: 0;
 }
+.carousel-text a{
+  color: #2ec9bd;
+}
+.carousel-text a:hover{
+  color: #77ad66;
+}
 #carousel .valign{
   height: 354px;
 }

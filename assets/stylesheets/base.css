@@ -494,6 +494,11 @@ hr {
   background-color: #dddddd;
   margin: 2em 0;
 }
+hr.salmon{
+  border-top: 4px solid #ee7266; 
+  margin:0;
+  height: 0;
+}
 
 
 /* Tables

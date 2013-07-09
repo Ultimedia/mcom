@@ -50,6 +50,9 @@
 #help-introduction .col:first-child  ul{
   margin-bottom: 20px;
 }
+#help-introduction .col:first-child  ul:last-child{
+  margin-bottom: 0;
+}
 #help-introduction .col:first-child ul li{
   margin: 0;
 }
