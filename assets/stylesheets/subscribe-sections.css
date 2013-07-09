@@ -1,0 +1,651 @@
+/* ==========================================================================
+/* Specific Sections for the Subscribe Page (and Application)
+   ========================================================================== */
+
+/* Subscribe introduction copy */
+#subscribe-introduction .icon-arrow-right{
+  top: 17px;
+}
+
+
+/* Error messages */
+.publication-error{
+  position: relative;
+}
+.publication-error label.error::before{
+  left: 10px;
+  top: -10px;
+}
+
+
+/* Subscribe subheader */
+#subscribe-section{
+  text-align: left;
+}
+#subscribe-section h2{
+  color: #fff;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 1.8em;
+}
+#subscribe-header{
+  background: #f0f0f0 url('../images/subscribe/subscribe-subheader.png') no-repeat top left;
+  height: 320px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#subscribe-header .carousel-text{
+  float: left;
+  margin-right: 15px;
+}
+#subscribe-header .valign{
+  height: 320px;
+  float: right;
+}
+#subscribe-header a{
+  float: right;
+  margin-top: 40px;
+}
+
+
+/* Application (sections specific for the ordering flow) */
+#subscribe-application .subscribe-introduction{
+  clear: both;
+  padding-bottom: 40px;
+  padding-top: 5px;
+}
+#subscribe-application .subscribe-introduction{
+  font-size: 1em;
+}
+#subscribe-application .col.eight p{
+  clear: both;
+} 
+#subscribe-application .addressfield input{
+  margin-bottom: 6px;
+}
+#subscribe-application .addressfield .error-container{
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+#subscribe-application h2:first-child{
+  display: inline-block;
+}
+
+
+/* Country select form */
+#country-select-container .label-big{
+  display: inline-block;
+  line-height: 38px;
+  font-size: 1.2em;
+  margin-right: 10px; 
+}
+#subscribe-application .eight{
+  position: relative;
+}
+#calculate-price-form select, #calculate-price-form .select-blue-box{
+  width: 230px;
+  display: inline-block;
+}
+#calculate-price-form #country-selection .out + div{
+  padding: 0;
+  text-align: right;
+}
+#calculate-price-form #country-selection .select-blue-box .out{
+  z-index: 300;
+}
+#calculate-price-form #country-selection .select-blue-box  label.error::before{
+  top: 24px;
+}
+
+
+/* Promo codes box */
+#promo-codes-box{
+  position: relative;
+  margin-top: 40px;
+  overflow: auto;
+}
+.promo-code-section.none{
+  display: none;
+}
+#promo-codes-box .code{
+  font-weight: 600;
+}
+#promo-codes-box .form-fields .error-container{
+  width: 442px;
+}
+#promo-codes-box input[type=text]{
+  width: 250px;
+}
+#promo-codes-box .promo-code-section{
+  margin-top: 10px;
+  padding-bottom: 30px;
+  overflow-y: auto;
+}
+#promo-codes-box .promo-code-section.closed, #add-promo-code.closed {
+  display: none;
+}
+#promotion-codes-toggle-btn{
+  display: inline-block;
+  font-size: 1.2em;
+}
+#add-promo-code{
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+
+/* Breadcrubs */
+#subscribe-application .breadcrumbs{
+  padding-top: 0;
+  padding-bottom: 20px;
+  list-style-type: none;
+  border-bottom: 4px solid #f8f8f8;
+  margin-bottom: 70px;
+  display: block;
+  overflow: auto;
+}
+#subscribe-application .breadcrumbs li{
+  font-size: 1.2em;
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+#subscribe-application .breadcrumbs .breadcrumb-line{
+  position: absolute;
+  width: 172px;
+  height: 2px;
+  background: #cacaca;
+  left: 142px;
+  top: 20px;
+}
+#subscribe-application .breadcrumbs li .breadcrumb-number{
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  color: #ee7266;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  border: 3px solid #ee7266;
+  font-family: 'proxima-nova', Helvetica, Arial;
+}
+#subscribe-application .breadcrumbs li.active .breadcrumb-number{
+  background: #ee7266;
+  color: #fff;
+}
+#subscribe-application .breadcrumbs .completed .breadcrumb-number{
+  border: 3px solid #3CA08C;
+  color: #3CA08C;
+}
+
+
+/* Form submit button */
+.form-submit-section{
+  border-top: 1px solid #d0d0d0;
+  padding-top: 15px;
+}
+#subscribe-application input[type=submit].btn-large{
+  padding-right: 45px;
+}
+
+
+/* General  table styles */
+#publication-container #order-error-container div label.error{
+  display: block !important;
+}
+#publication-container{
+  position: relative;
+}
+#publication-order-table, #invoice-table{
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-spacing:0;
+  border-collapse:collapse;
+  background: #fff;
+}
+#publication-order-table tr th, #invoice-table tr th{
+  background: #fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  border: 0;
+}
+#publication-order-table tr th{
+  border: 0;
+}
+#publication-order-table tr td, #invoice-table tr td{
+  padding: 20px 0; 
+  background: ;
+}
+#publication-order-table .lighter-row td{
+  background: #fdfdfd;
+}
+#publication-order-table  tr td:last-child, #publication-order-table  tr th:last-child, #invoice-table tr td:last-child, #publication-order-table tr th:last-child{
+  text-align: right;
+  padding-right: 10px;
+}
+#publication-order-table label{
+  font-size: 1.15em;
+  font-family: 'museo-sans', 'proxima-nova', Helvetica, sans-serif;
+}
+#publication-order-table tr.hide{
+  display: none;
+}
+#invoice-table tr td:first-child, #invoice-table tr th:first-child{
+  width: 500px;
+}
+#invoice-table tr th{
+  padding: 0;
+  padding-bottom: 8px;
+}
+#invoice-table tr th:last-child{
+  text-align: right;
+}
+/* Specific table section styling */
+/* Price calculation section */
+#price-calculation-section{
+  border-top: 2px solid #d0d0d0;
+  border-bottom: 2px solid #d0d0d0;
+  background: #fff;
+}
+#price-calculation-section tr td{
+  background: #fff;
+  padding: 15px 0;
+}
+#price-calculation-section.closed, #price-total-section.closed{
+  display: none;
+}
+/* Price total section */
+#price-total-section{
+  font-size: 1.3em;
+}
+/* Checkbox column */
+#publication-order-table tr td:first-child, #publication-order-table tr th:first-child{
+  width: 15px;
+  padding-left: 10px;
+}
+#publication-order-table tr td:first-child input[type=checkbox]{
+  margin-top: 3px;
+} 
+#publication-order-table tr .subscription-title label{
+  margin-right: 5px;
+  line-height: 1.4em;
+  font-size: 1.1em;
+}
+/* Table helper classes */
+.decimals{
+  color: #828282;
+}
+.subscription-title{
+  width: 460px;
+}
+.subscription-date{
+  text-align: center;
+}
+/* Publication order table detail view */
+#publication-order-table .details div{
+  padding: 20px 30px 30px 80px;
+  position: relative;
+}
+#publication-order-table .details p{
+  text-align: left;
+  font-family: 'proxima-nova', Helvetica, sans-serif;
+  font-weight: 300;
+}
+#publication-order-table .details p:first-of-type{
+  margin-top: 0;
+}
+#publication-order-table .details td{
+  padding: 10px 0 0 0;
+}
+#publication-order-table .details img{
+  left: 20px;
+  position: absolute;
+  top: 25px;
+  margin: 0 10px 0 0;
+  border: 3px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+#publication-order-table .details.closed{
+  display: none;
+}
+#publication-order-table tbody tr.checked td{
+  background: #e6e6e6;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+}
+#publication-order-table tbody tr.checked{
+  border-left: 1px solid #bebebe;
+  border-right: 1px solid #bebebe;
+}
+#publication-order-table tbody tr.checked td label{
+  font-weight: 700;
+}
+#publication-order-table tr.checked td{
+  font-weight: 600;
+}
+#publication-order-table tr.checked td a{
+  font-weight: 400;
+}
+
+
+/* License agreement section */
+.license-agreement div, .promotions div{
+  position: relative;
+}
+.license-agreement label.error, .promotions label.error{
+  float: left;
+  margin-top: 10px;
+}
+.license-agreement > label, .promotions > label{
+  font-size: 1.2em;
+  line-height: 1.8em;
+  padding-top: 4px;
+  margin-left: 5px;
+}
+.address-copy > label{
+  line-height: 1.4em;
+}
+.license-agreement input[type=checkbox], .promotions input[type=checkbox]{
+  float: left;
+  margin-top: 9px;
+}
+.license-agreement label.error::before, .promotions label.error::before {
+  top: 0px;
+  left: 2px;
+}
+
+
+.address-copy{
+  padding-bottom: 6px;
+  margin-bottom: 13px;
+}
+.address-copy > label{
+  margin-left: 3px;
+}
+
+
+/* General grey box */
+.greybox{
+  background: #f8f8f8;
+  border: 1px solid #d0d0d0;
+  padding: 25px 20px;
+  margin: 10px 0 40px 0;
+}
+
+
+/* Sign in header */
+.greybox input[type=text], .greybox input[type=email], .greybox input[type=password] {
+  padding: 13px 8px;
+  background: #fff;
+}
+.greybox input[type=text], .greybox input[type=password]{
+  margin-right: 5px;
+}
+#sign-in-header fieldset, #password-header fieldset{
+  margin-bottom: 0;
+}
+.greybox label{
+  margin-right: 2px;
+}
+#sign-in-header fieldset h2{
+  border-bottom: 0;
+}
+#sign-in-header #password-reset-btn{
+  margin-right: 264px;
+  margin-top: 5px;
+  text-align: right;
+}
+#application-login-form input[type=email], #application-login-form input[type=password], #password-header input[type=password]{
+  width: 335px;
+  height: 44px;
+  margin:0;
+}
+#password-header input[type=password]{
+  width: 262px; 
+}
+#application-login-form input[type=submit], #password-header input[type=submit]{
+  font-size: 1.2em;
+}
+#application-login-form .inline-field, #password-header .inline-field{
+    margin-right: 10px;
+}
+#application-login-form .inline-field:last-of-type, #password-header .inline-field:last-of-type{
+  margin-right: 0;
+}
+#application-login-form .password-recovery-btn{
+  margin-left: 450px;
+  margin-right: 0;
+}
+#creditcard-date-fields .field select{
+  width: 112px;
+  margin-right: 5px;
+}
+
+
+/* Invoice */
+#invoice ul{
+  list-style-type: none;
+  padding: 50px 20px 0 20px;
+}
+#invoice ul li{
+  margin-bottom: 5px;
+}
+#invoice .col ul:last-child{
+  padding-top: 0;
+}
+#invoice .row:first-child .col{
+  border-bottom: 1px solid #d0d0d0;
+}
+#invoice h2{
+  padding-bottom: 0;
+}
+#invoice .row .one-third{
+  margin-top: 30px;
+}
+#invoice ul li span{
+  display: inline-block;
+  width: 75px;
+}
+
+
+/* Responsive CSS for both Tablet and Mobile */
+@media only screen and (max-width: 939px) {
+
+
+  #subscribe-application h2{
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+
+  #calculate-price-form .select-blue-box{
+    width: 200px;
+  }
+  .subscription-title{
+    width: 350px;
+  }
+  #publication-order-table{
+    margin: 20px 0;
+  }
+
+
+  /* Subscribe header */
+  #subscribe-header .carousel-text{
+    width: 494px;
+    font-size: 1.50em;
+  }
+  #subscribe-header a{
+    float: right;
+    margin-top: 50px;
+  }
+  
+  .license-agreement{
+    width: 500px;
+  }
+
+
+  /* Index - signed in page */
+  #sign-in-header input[type=email], #sign-in-header input[type=password]{
+    width: 224px;
+  }
+  #password-header input[type=password] {
+    width: 154px;
+  }
+
+  #application-login-form .password-recovery-btn{
+    margin-left: 338px;
+    margin-right: 0;
+  }
+
+
+  /* Breadcrumbs */
+  #subscribe-application .breadcrumbs .breadcrumb-line{
+    width: 110px;
+    left: 120px;
+  }
+
+  #invoice-table tr td:first-child, #invoice-table tr th:first-child{
+    width: 384px;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+
+
+  /* Login form */
+  #application-login-form .inline-field, #sign-in-header input[type=email], #sign-in-header input[type=password], #password-header .inline-field, #password-header input[type=password]{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #application-login-form .password-recovery-btn{
+    margin: 10px 0 0 0;
+    float: right;
+  }
+
+
+  /* Country selection form */
+  #country-selection, #country-selection .select-blue-box, #country-selection .select-blue-box select{
+    width: 100%;
+  }
+  #calculate-price-form #country-selection .select-blue-box  label.error::before{
+    top: 34px;
+  }
+
+
+  /* Breadcrumbs */
+  #subscribe-application .breadcrumbs{
+    display: none;
+  }
+
+    
+  /* Promo codes box */
+  .promo-code-section label{
+    display: block;
+  }
+  #promo-codes-box input[type=text], #promo-codes-box .btn{
+    width: 100%;
+  }
+  #promo-codes-box input[type=text]{
+    margin-bottom: 5px;
+  }
+
+
+  /* License agreement */
+  .license-agreement{
+    width: 100%;
+    display: block;
+  }
+
+
+  /* Subscribe introduction page */
+  #subscribe-header .carousel-text{
+    font-size: 1.2em;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  #subscribe-header .valign{
+    width: auto;
+  }
+  #subscribe-header a{
+    float: none;
+  }
+  #subscribe-introduction .btn{
+    width: 100%;
+  }
+  #publication-order-table tr td:first-child{
+    padding-right: 10px;
+  }
+  .subscription-title{
+    width: auto;
+  }
+
+
+  /* Invoice table */
+  #invoice-table tr td:first-child,
+  #invoice-table tr th:first-child{
+    width: auto;
+  }
+  #invoice ul{
+    padding: 10px 0;
+  }
+
+
+  /* Creditcard form section */
+  #creditcard-date-fields .field{
+    width: 50%;
+  }
+  #creditcard-date-fields .field select{
+    width: 95%;
+    margin-right: 5px;
+  }
+  #creditcard-date-fields .field:last-child select{
+    margin-right: 0;
+    width: 100%;
+  }
+
+
+  /* Promo codes box */
+  #promo-codes-box{
+    padding-bottom: 30px;
+    overflow: auto;
+  }
+  #add-promo-code{
+    position: relative;
+    right: 0;
+    bottom: -10px;
+    text-align: right;
+    float: right;
+  }
+  #promo-codes-box .form-fields .error-container{
+    width: 100%;
+  }
+
+
+}
+

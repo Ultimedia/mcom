@@ -1,0 +1,1372 @@
+/* ==========================================================================
+/* Base Sections (includes global navigation, system panels, footers, headers)
+========================================================================== */
+.signed-in #nav-header .navigation #mobile-signin{
+  display: none;
+}
+
+
+/* Brand Header (top white bar with logo - search) */
+#brand-header{
+  background: #fff;
+  padding: 23px 0 17px 0;
+}
+#brand-header .container{
+  position: relative;
+}
+#brand-header #header-search{
+  margin-top: 2px;
+}
+#brand-header #header-search-input, #mobile-search-input{
+  width: 465px;
+  float: left;
+  margin: 0;
+  background: #fff;
+  color: #464240;
+  box-shadow: inset 0 0 7px -4px #888;
+  background: #fff url('../images/icons/icon-search-small.png') no-repeat 8px center;
+  border: 1px solid #c5c5c5;
+  font-size: 1.2em;
+  padding-left: 30px;
+  border-radius: 0;
+  height: 38px;
+}
+#brand-header #header-search-button{
+  color: #fff;
+}
+
+
+/* Autocomplete panel */
+#autocomplete div::before{
+  content: "\25b2"; /* left point triangle in escaped unicode */
+  color:#e6e6e6;
+  position: absolute;
+  top: 0px;
+  right: 16px;
+  z-index: 999;
+}
+#autocomplete{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 360px;
+  line-height: 0;
+  z-index: 1000;
+  display: none;
+}
+#autocomplete div{
+  position: relative;
+  background: #f0f0f0;
+  -khtml-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+  -ms-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+  -o-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+  -moz-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+  -webkit-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+  box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+}
+#autocomplete div ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#autocomplete div ul li{
+  clear: left;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.3;
+  border-bottom: 1px solid #dbdbdb;
+}
+#autocomplete div ul li:last-child{
+  border-bottom: 0;
+}
+#autocomplete div ul li h4{
+  margin: 0;
+  line-height: 1.2em;
+}
+#autocomplete div ul li p{
+  padding: 0;
+  margin: 0;
+  color: #4c4c4c;
+}
+#autocomplete h4.section-header{
+  display: block;
+  margin: 0;
+  padding: 6px 10px;
+  background: #e6e6e6;
+  border-top: 1px solid #dbdbdb;
+  border-bottom:1px solid #dbdbdb;
+  font-size: 1.2em;
+}
+#autocomplete div ul.autocomplete-list li a{
+  padding: 12px 10px 12px 10px;
+  display: block;
+}
+#autocomplete div ul.autocomplete-list.publications li a{
+  padding-left: 66px;
+  text-decoration: none;
+  outline: none;
+  min-height: 46px;
+}
+#autocomplete div ul li a:hover{
+  background: #fafafa;
+}
+#autocomplete div ul li a h4{
+    color: #4c4c4c;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: 'museo-sans','proxima-nova',sans-serif;
+}
+#autocomplete ul li a img{
+  float: left;
+  margin: 0 10px 0 -56px;
+  border: 3px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+
+/* Main navigation header */
+#nav-header, #toggle-account-menu{
+  background: #363636;
+}
+#toggle-account-menu{
+  border-top: 1px solid #626262;
+  border-bottom: 0;
+}
+#toggle-account-menu .btn-bright{
+  margin: 11px 1px 11px 0;
+}
+#nav-header .btn-bright{
+  margin: 11px 0 0 0;
+}
+#nav-header .navigation {
+  line-height: normal;
+  clear: both;
+}
+#nav-header .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#nav-header .navigation ul li {
+  display: block;
+  float: left;
+  margin: 0;
+  border-right: 1px solid #736f6f;
+}
+#nav-header .navigation ul li:last-child {
+  border-right: 0;
+}
+#nav-header .navigation ul li a{
+  color: #fff;
+  text-decoration: none;
+  padding: 24px 20px;
+  display: block;
+  font-size: 1.2em;
+}
+#nav-header .navigation ul li a.current {
+  border-color: #fff;
+}
+#nav-header .navigation ul li a:hover {
+  background: #444444;
+}
+#nav-header .navigation ul li a:active {
+  background: #2ea598;
+}
+#nav-header .navigation .active{
+  background: #595555;
+  border-left: 1px solid #736f6f;
+}
+#nav-header #toggle-user-panel{
+  padding: 23px 48px 23px 18px;
+  border-left: 1px solid #736f6f;
+  border-right: 1px solid #736f6f;
+  position: relative;
+  color: #fff;
+  font-size: 1.2em;
+}
+#nav-header #toggle-user-panel .icon-arrow-down{
+  top: 26px;
+}
+#nav-header .navigation #mobile-signin, #nav-header .navigation #mobile-access-code, #mobile-search.open{
+  display: none;
+}
+
+
+/* Global navigation menu's base (dark themed menu panels) */
+.global-menu{
+  background: #363636;
+  color: #fff;
+  border-top: 1px solid #626262;
+  font-size: 0.9em;
+  padding: 13px 0;
+}
+.global-menu a{
+  color: #2ec9bd;
+}
+.global-menu a:hover, #nav-header #mobile-signin .password-recovery-btn:hover{
+  color: #77ad66;
+}
+.global-menu ul{
+  padding-left: 0;
+}
+.global-menu ul li{
+  list-style-type: none;
+}
+.global-menu label{
+  font-size: 1.2em;
+  padding-right: 5px;
+}
+.global-menu .btn, .global-menu .btn:hover{
+  color: #fff;
+}
+.global-menu p{
+  margin-top: 0;
+}
+.global-menu h3{
+  margin: 0;
+}
+.global-menu hr{
+  border-top: 1px solid #626262;
+  height: 0;
+  margin: 13px 0 0 0;
+}
+
+
+/* Sign in menu (hide by default but shwo when js is disabled) */
+#signin-panel{
+  padding: 13px 0;
+}
+#signin-panel, #signin-panel .closed, #password-recovery-panel,  #login-options-panel, #authentication-code-section{
+  display: none;
+}
+#signin-panel.open, #password-recovery-panel.open, #login-options-panel.open, #mobile-access-code.open{
+  display: block;
+}
+#signin-panel .twelve{
+  position: relative;
+}
+.no-js #signin-panel , .no-js #login-options-panel, .no-js #authentication-code-section{
+  display: block;
+}
+#signin-panel #btn-login{
+  color: #fff;
+  position: absolute;
+  right: 0;
+}
+#signin-panel input[type=text], #signin-panel input[type=email],  #signin-panel input[type=password], #mobile-signin input[type=text], #mobile-signin input[type=email], #mobile-signin input[type=password], #password-recovery-panel input[type=email], #password-recovery-panel input[type=text], #authentication-code-form-mobile input[type=text]{
+  padding: 13px 6px;
+  font-weight: normal;
+  width: 344px;
+  height: 44px;
+}
+#signin-panel .field-inline:last-of-type{
+  margin-right: 10px;
+}
+.signin-active, .user-panel-active{
+  background: none;
+  border: 1px solid #736f6f;
+  border-radius: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  margin: 0 !important;
+  border-top: 0;
+  border-bottom: 0;
+}
+.signin-active .icon-arrow-down, .user-panel-active .icon-arrow-down{
+  top: 27px;
+}
+#signin-panel .hide{
+  display: none;
+}
+#signin-panel .field-inline, #mobile-access-code .field-inline,  #mobile-signin .field-inline, #password-recovery-panel .field-inline{
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+}
+#signin-panel .field-inline, #password-recovery-panel .field-inline{
+  position: relative;
+}
+#signin-panel .error-container, #password-recovery-panel .error-container{
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+#signin-panel #authentication-code-form .field-inline input[type=email]{
+  width: 310px;
+}
+#signin-panel .login-options{
+  width: 460px;
+  margin-top: 5px;
+}
+#signin-panel .login-options label{
+  font-size: 1em;
+  margin-left: 90px;
+}
+#signin-panel .remember, #mobile-signin .remember{
+  margin-right: 5px;
+}
+
+
+/* Login Options panel */
+#login-options-panel{
+  padding: 0;
+}
+#login-options-panel .one-third{
+  border-right: 1px solid #626262;
+  margin-right: -1px;
+  padding: 15px 0;
+}
+#login-options-panel .one-third:last-child{
+  border-right: 0;
+}
+
+#login-options-panel a{
+  font-size: 1.2em;
+  line-height: 36px;
+}
+
+#login-options-panel a img, a span { 
+  vertical-align: middle; 
+}
+
+#login-options-panel a img{
+  margin-right: 5px;
+}
+
+.password-recovery-btn{
+  margin-top: 5px;
+}
+
+
+/* Authentication code form */
+#authentication-code-form .field-inline{
+  margin-right: 0;
+  margin-left: 0;
+  width: 310px;
+}
+#authentication-code-form input[type=text]{
+  width: 326px;
+}
+#authentication-code-form #btn-redeem{
+  padding-right: 36px;
+}
+#authentication-code-section #authentication-code-form{
+  padding-top: 30px;
+}
+
+
+/* Password recovery panel */
+#password-recovery-panel p{
+  margin: 0;
+}
+#password-recovery-panel .field-inline{
+  margin-right: 10px;
+}
+#password-recovery-panel input[type=email]{
+  width: 310px;
+}
+#password-recovery-panel input[type=submit]{
+  background-image: none;
+}
+#password-recovery-panel .password-recovery-btn{
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+#password-recovery-panel h3, #login-section h3{
+  margin-bottom: 10px;
+}
+
+#password-recovery-panel .seven{
+  padding-top: 40px;
+}
+
+
+/* User Dashboard */
+#user-panel{
+  padding: 30px 0;
+}
+#user-panel form select{
+  width: 288px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  height: 42px;
+  color: #363636;
+  background:  #e9e9e9 url('../images/icons/icon-arrow-select.png') no-repeat right center;
+  border: 1px solid  #ccc;
+  -webkit-appearance: none;
+  padding: 10px 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#user-panel #publication-browse .field{
+  width: 290px;
+  display: inline-block;
+  padding: 0;
+}
+#user-panel .row .col:first-child a{
+  font-size: 1.2em;
+}
+
+
+/* Hero Carousel */
+#carousel{
+  height: 354px;
+  width: 100%;
+  background: #fff url('../images/home/carousel/home.png') no-repeat center right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+#carousel-nav-container{
+  position: relative;
+}
+#carousel .border-transparent{
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 100%;
+  background: #464646;
+  opacity:0.4;
+  filter:alpha(opacity=40)
+}
+.carousel-text{
+  font-family: "museo-sans", "proxima-nova", helvetica, arial, sans-serif;
+  font-size: 1.60em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #fff;
+  display: block;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 22px;
+  background: #373737;
+  max-width: 620px;
+  background: rgb(55, 55, 55) transparent;
+  background: rgba(55, 55, 55, 0.9);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#373737, endColorstr=#373737);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#373737, endColorstr=#373737)";
+}
+.carousel-text p{
+  line-height: 1.5em;  
+  font-size: 1em;
+  margin: 0;
+}
+#carousel .valign{
+  height: 354px;
+}
+#carousel .valign > div:first-child {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+#carousel .carousel-prev-btn, #carousel .carousel-next-btn{
+  z-index: 500;
+  position: absolute;
+  top: 155px;
+  right:10px; 
+  height: 30px; 
+  width: 18px; 
+  padding: 5px 10px; 
+  background: #2ea598 url('../images/icons/icon-carousel-arrow-right.png') no-repeat center center; 
+  transition:none;
+  display: none;
+}
+#carousel .carousel-prev-btn{
+  background: #2ea598 url('../images/icons/icon-carousel-arrow-left.png') no-repeat center center; 
+  left: 10px;
+}
+#carousel .carousel-next-btn:hover{
+  background-color: #2c8a80;
+}
+#carousel .carousel-prev-btn:hover{
+  background-color: #2c8a80;
+}
+#carousel #carousel-list{
+  display: none;
+}
+#carousel .js-background-slider {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#carousel .carousel-subscribe{
+  margin: 0 auto;
+  display: block;
+  max-width: 510px;
+}
+#carousel .carousel-subscribe .carousel-text input[type=email], #carousel .carousel-subscribe .carousel-text input[type=text]{
+  padding: 13px;
+  width: 350px;
+}
+#carousel .carousel-subscribe .carousel-text input[type=submit]{
+  font-size: 17px;
+  margin-left: 10px;
+}
+#carousel #carousel-dots-container{
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  bottom: 0;
+  text-align: center;
+}
+#carousel #carousel-dots-container ul{
+  margin-right: 20px;
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+  background: #fff;
+  padding: 4px 4px 0 4px;
+  -webkit-border-radius: 4px; 
+  -moz-border-radius:4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -ms-border-bottom-left-radius: 0;
+  -o-border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -ms-border-bottom-right-radius: 0;
+  -o-border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#carousel #carousel-dots-container ul li:first-child{
+  padding-left: 6px;
+}
+#carousel #carousel-dots-container ul li:last-child{
+  padding-right: 6px;
+}
+#carousel #carousel-dots-container ul li{
+  display: inline-block;
+}
+#carousel #carousel-dots-container ul li a{
+  text-align: center;
+  display: block;
+  padding: 9px 7px
+}
+#carousel #carousel-dots-container ul li a span{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  background: #2ea598;
+  width: 10px;
+  height: 10px;
+}
+#carousel #carousel-dots-container ul li a.active span{
+  background: #4c4c4c;
+  background: none;
+  border: 1px solid #2ea598;
+  width: 9px;
+  height: 9px;
+}
+#subscribe-form{
+  margin-top: 6px;
+}
+
+
+/* Subscribe section (green/blue subscribe promo section) */
+.subscribe-section{
+  background: #26505e;
+  padding: 25px 0 24px 0;
+  text-align: center;
+}
+.subscribe-section .olive{
+  font-size: 1.2em;
+}
+.subscribe-section a:first-child{
+  margin-right: 10px;
+}
+.subscribe-section a:last-child{
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+.subscribe-section a:last-child:hover{
+  text-decoration: none;
+}
+
+
+/* Updates list */
+.updates-list{
+  padding: 0;
+}
+.updates-list li{
+  list-style-type: none;
+  position: relative;
+  padding-left: 65px;
+  margin-bottom: 60px;  
+}
+.updates-list li h5{
+  margin-bottom: 3px;
+}
+.updates-list .date{
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: block;
+  background: #ee7266;
+  text-align: center;
+  width: 53px;
+  border-radius: 3px;
+  font-family: 'museo-sans', 'proxima-nova', helvetica, sans-serif;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.updates-list .date .day{
+  display: block;
+  font-size: 1.70em;
+  color: #fff;
+  padding-top: 0px;
+  margin: 8px 0 0 0 ;
+  padding: 0;
+}
+.updates-list .date .month{
+  display: block;
+  font-size: 1em;
+  color: #373737;
+  margin-bottom: 2px;
+}
+.updates-list li:last-child{
+  margin-bottom: 0;
+}
+.updates-list p,  .updates-list h5{
+  margin: 0;
+  font-size: 1.1em;
+}
+
+
+/* Updates list footer */
+#footer-about .updates-list li{
+  margin-bottom: 28px;  
+}
+
+
+/* Footer aboutsection */
+#footer-about p{
+  font-size: 1.1em;
+}
+#footer-about p:last-child{
+  margin-bottom: 0;
+}
+
+
+/* Footer Linking / Contact area */
+#footer-dark{
+  background: #373737;
+  color: #fff;
+  padding: 70px 0 60px 0;
+}
+#footer-dark .icon-left{
+  padding-left: 30px;
+}
+#footer-dark p{
+  font-size: 1.1em;
+}
+#to-top-button{
+  position: absolute;
+  top: 0;
+  padding: 12px 18px 12px 40px;
+  background: #fff;
+  font-size: 1.2em;
+  color: #26505e !important;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #fff url('../images/icons/icon-arrow-top.png') no-repeat 15px center;
+}
+#to-top-button.grey{
+  background-color: #f0f0f0;
+}
+#footer-dark #footer-search {
+  margin-top: 20px;
+}
+#footer-search-input{
+  width: 284px;
+  padding-left: 25px !important;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#footer-dark hr{
+  margin-top: 15px;
+}
+#footer-dark ul{
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#footer-dark ul li{
+  margin-bottom: 8px;
+}
+#footer-dark a{
+  color: #d0ddcc;
+}
+#footer-dark .menu-big{
+  font-size: 1.3em;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 57px;
+}
+#footer-dark .menu-big li{
+  margin-bottom: 10px;
+}
+#footer-dark .menu-big li a{
+  color: #fff;
+  display: block;
+}
+#footer-dark .menu-big li a:hover{
+  color: #77ad66;
+}
+#footer-dark a:hover{
+  color: #77ad66;
+}
+
+
+/* Footer Copyright */
+#footer-black{
+  background: #2b2b2b;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+
+
+/* Set styling for pages with a h2-h1 style header */
+#default-page h2, #subscribe-introduction h2, #contact-page .row:first-child h2, #institutional-enquiries-page .row:first-child h2, #help-page #help-introduction h2{
+  margin-bottom: 30px; 
+}
+#default-page h1, #subscribe-introduction h1, #contact-page h1, #help-page #help-introduction h1, #institutional-enquiries-page h1{
+  margin-bottom: 30px;
+}
+
+
+/* Generic styling for default pages (Terms and conditions eg) */
+#default-page .content-section h3{
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+#default-page h1{
+  margin-top: 50px;
+}
+#default-page h1:first-child{
+  margin-top: 0;
+}
+#default-page h2{
+  margin-top: 30px;
+}
+#default-page ul{
+  margin: 20px 0;
+}
+
+
+
+/* ==========================================================================
+/* Responsive Styling (for tablet and mobile)
+========================================================================== */
+/* Tablet + Mobile (combined styling for menus) */
+@media only screen and (max-width: 939px) {
+
+
+  /* Nav Header */
+  #nav-header{
+    padding: 5px 0 0 0;
+  }
+  #nav-header .container{
+    padding: 0;
+  }
+  #nav-header .navigation{
+    background: #595555;
+  }
+  #nav-header .navigation .menu{
+    display: none;
+  }
+  .no-js #nav-header .navigation .menu{
+    display: block;
+  }
+  #nav-header h1{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    border: 0;
+    margin: 6px 0 10px 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+  #nav-header .nav-toggle, #nav-header .nav-search {
+    padding: 8px;
+    width: 25px;
+    height: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    display: inline-block;
+    margin: 1px 10px 5px 10px;
+  }
+  #nav-header .navigation ul li {
+    float: none;
+    margin-left: 0;
+    background: #595555;
+    border: 0;
+    border-bottom: 1px solid #6b6a6a;
+  }
+  #nav-header .navigation ul li a {
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.2em;
+    border: 0;
+    font-weight: 500;
+  }
+  #nav-header .navigation .active{
+    background: #595555;
+    border: 0;
+    color: #d0ddcc;
+  }
+  #nav-header .navigation ul li a:hover {
+    background-color: #514e4e;
+  }
+  #nav-header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #nav-header .menu h3, #nav-header .menu p{
+    color: #fff;
+  }
+  #nav-header .navigation #mobile-signin{
+    display: none;
+    border-bottom: 0;
+  }
+  #nav-header .navigation #mobile-signin{
+    display: block;
+  }
+
+
+  /* User dashboard */
+  #user-panel form select{
+    width: 180px;
+    height: 41px;
+    padding-right: 40px;
+  }
+  #user-panel .three ul span{
+    display: block;
+    line-height: 1.1em;
+  }
+  #user-panel .three ul li{
+    margin-bottom: 15px;
+  }
+  #nav-header .navigation ul li:last-child{
+    padding-top: 1px;
+  }
+
+
+  /* Hide sign in form */
+  #signin-panel, .no-js #signin-panel{
+    display: none;
+  }
+
+
+  /* Mobile sign in panel */
+  #nav-header .navigation #mobile-signin, #nav-header .navigation #mobile-access-code{
+    background: #363636 !important;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0;
+  }
+  #mobile-signin p, #mobile-access-code p{
+    margin: 0;
+  }
+  #mobile-signin .login-options{
+    width: 364px;
+    float: right;
+  }
+  #mobile-signin .login-options label:last-child{
+    margin-left: 36px;
+  }
+  #mobile-signin form, #mobile-access-code form {
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  #mobile-signin label{
+    color: #fff;
+    padding-right: 3px;
+  }
+  #mobile-signin input[type=email], #mobile-signin input[type=password], #authentication-code-form-mobile input[type=text]{
+    border-radius: 0;
+    margin: 0;
+    padding: 14px 10px;
+    width: 231px;
+  }
+  #mobile-signin .last-field, #authentication-code-form-mobile .last-field{
+    margin-right: 10px;
+  }
+  #nav-header #mobile-signin .password-recovery-btn{
+    margin: 10px 30px 0 0;
+    font-size: 1em;
+    color: #2ec9bd;
+    padding: 0;
+    display: inline-block;
+  }
+  #nav-header #mobile-signin .password-recovery-btn:hover{
+    background: none;
+  }
+
+  #login-options-panel{
+    padding: 0;
+    border-bottom: 5px solid #ed8a81;
+  }
+
+  #login-options-panel .one-third{
+    padding: 10px 0;
+  }
+
+
+  /* Mobile authentication code panel */
+  #authentication-code-form-mobile .field-inline, #authentication-code-form-mobile .field-inline input[type=text]{
+    width: 486px;
+  }
+  
+  #authentication-code-form-mobile{
+    padding-bottom: 6px;
+  }
+
+  #nav-header .navigation #mobile-signin.open, #nav-header .navigation #mobile-access-code.open{
+    display: block;
+  }
+
+
+}
+
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+ 
+  /* Recovery panel */
+  #password-recovery-panel input[type=email]{
+    width: 252px;
+  }
+
+
+  /* Branding header */
+  #brand-header #header-search-input{
+    width: 400px;
+  }
+  #brand-header .logo img{
+    max-width: 210px;
+  }
+
+
+  /* Carousel */
+  #carousel .carousel-subscribe .carousel-text{
+    max-width: 374px;
+  }
+  #carousel .carousel-subscribe .carousel-text input[type=email]{
+    width: 255px;
+  }
+
+
+  /* Hide search button */
+  .nav-search{
+    display: none !important;
+  }
+
+
+  /* Footer search */
+  #footer-search-input{
+    width: 215px;
+  }
+  #user-panel #publication-browse .field,  #user-panel #publication-browse select{
+    width: 204px;
+  }
+
+
+  /* Login options */
+  #login-options-panel .one-third:last-child{
+    position: relative;
+  }
+
+  #login-options-panel .one-third:last-child span{
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 8px;
+    line-height: 20px;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+
+
+  /* Set title margins on mobile */
+  #institutional-enquiries-page h1, #contact-page h1, #subscribe-introduction h1, #contact-page h1, #help-page #help-introduction h1{
+    margin-bottom: 10px;
+  }
+  #institutional-enquiries-page h2, #contact-page h2, #subscribe-introduction h2, #contact-page .row:first-child h2, #help-page #help-introduction h2{
+    margin-bottom: 20px; 
+  }
+
+
+  /* Recovery panel */
+  #password-recovery-panel input[type=email]{
+    width: 100%;
+  }
+  #password-recovery-panel .field-inline{
+    float: none;
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  #password-recovery-panel .seven{
+    padding: 0;
+    margin: 10px 0;
+  }
+  #password-recovery-panel input[type=submit]{
+    width: 100%;
+  }
+  .showmobile.inline-block {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+  }
+  
+
+  /* Branding header */
+  #brand-header{
+    padding: 8px 0 2px 0;
+  }
+  #brand-header .logo img{
+    max-width: 190px;
+  }
+
+
+  /* Main navigation */
+  #nav-header .container{
+    width: 100%;
+  }
+
+
+  /* User dashboard */
+  #user-panel .col{
+    border-bottom: 1px solid #626262;
+    padding-bottom: 20px;
+  }
+  #user-panel .five{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #user-panel #publication-browse{
+    margin-top: 10px;
+  }
+  #user-panel #publication-browse .field{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #user-panel #publication-browse select{
+    width: 100%;
+    font-size: 1.3em;
+  }
+  #user-panel #publication-browse input[type=submit]{
+    width: 100%;
+    margin-top: 3px;
+  }
+
+
+  /* Mobile sign in */
+  #mobile-signin, #mobile-access-code{
+    padding: 10px;
+  }
+  #mobile-btn-login{
+    background-position: 95% center;
+  }
+  #mobile-signin .field-inline, #authentication-code-form-mobile .field-inline{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #authentication-code-form-mobile .field-inline input[type=text], #mobile-signin input[type=email], #mobile-signin input[type=password]{
+    font-size: 1.3em;
+    width: 100%;
+    padding: 10px 5px;
+  }
+  #mobile-signin input[type=submit], #mobile-access-code input[type=submit]{
+    width: 100%;
+    padding: 10px 5px;
+  }
+  #mobile-signin .login-options{
+    width: 100%;
+    margin-top: 10px;
+  }
+  #nav-header #mobile-signin .password-recovery-btn{
+    font-size: 1em;
+    color: #2ec9bd;
+    padding: 0;
+    float: left;  
+    margin: 0;
+  }
+  #nav-header #mobile-signin label{
+    float: right;
+  }
+  #mobile-signin .login-options label:last-child{
+    margin-left: 0
+  }
+
+
+  /* Mobile search and subscribe form (fluid forms) */
+  #mobile-search{
+    display: none;
+    border-top: 1px solid #202224;
+    border-bottom: 1px solid #202224;
+    position: relative;
+    padding-right: 64px;
+    background: #595555;
+    overflow: auto;
+    border-bottom: 5px solid #ed8a81;
+    clear: both;
+  }
+  .no-js #mobile-search, #mobile-search.open{
+    display: block;
+  }
+  #nav-header #mobile-search-input, #subscribe-form .field-inline{
+    margin: 10px 0 10px 10px;
+    float: left;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    padding: 14px 10px 14px 30px;
+    font-size: 1.3em;
+    border: 0;
+    display: block;
+    font-size: 1.3em;
+    height: 45px;
+    -moz-box-sizing: border-box;
+  }
+  #carousel .carousel-subscribe .carousel-text input[type=email]{
+    width: 100%;
+  }
+  #mobile-search-button, #carousel #subscribe-form input[type=submit]{
+    border: none;
+    float: left;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 45px;
+    background: #3ca095;
+  }
+  #subscribe-form .field-inline{
+    margin:0;
+    padding: 0;
+    height: auto;
+  }
+  #subscribe-form-container{
+    position: relative;
+    display: block;
+    padding-right: 115px;
+  }
+  #carousel #subscribe-form input[type=email]{
+    font-size: 1.3rem;
+    padding: 8px;
+    height: 44px;
+  }
+  #carousel #subscribe-form input[type=submit]{
+    top: 0;
+    height: 44px;
+    right: 0;
+  }
+
+
+  /* Hero Carousel */
+  #carousel .border-transparent{
+    display: none;
+  }  
+  #carousel, #carousel .valign{
+    height: 260px;
+  }
+  #carousel .background-slider{
+    width: 100%;
+  }
+  #carousel .carousel-text{
+    font-size: 1.2em;
+    padding: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    max-width: 100% !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+  #carousel .valign{
+    width: auto;
+  }
+  #carousel .carousel-prev-btn, #carousel .carousel-next-btn{
+    bottom: 0;
+    left: 0;
+    top: auto;
+  }
+  #carousel .carousel-next-btn{
+    right: 0;
+    left: auto;
+  }
+  #carousel .js-background-slider .carousel-text{
+    bottom: 40px;
+  }
+  #carousel .carousel-menu-background{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #e6e6e6;
+    bottom: 0;
+    left: 0;
+  }
+  #carousel-nav-container{
+    position: static;
+  }
+  #carousel #carousel-dots-container ul{
+    background: none;
+  }
+
+
+  /* Subscribe section */
+  .subscribe-section{
+    padding: 25px 0 20px 0;
+  }
+
+  .subscribe-section .olive{
+    margin-top: 20px;
+    display: block;
+  }
+
+
+  /* Footer */
+  #footer-dark .container{
+    padding: 0;
+  }
+  #footer-dark .col:nth-child(2){
+    margin-top: 0;
+  }
+  #footer-dark ul li, #footer-dark h2, #footer-dark p{
+    padding: 0 10px;
+  }
+  #footer-dark p{
+    margin: 0 0 10px 0;
+  }
+  #footer-dark h2{
+    margin-bottom: 20px;
+  }
+  #footer-dark{
+    padding: 80px 0 0 0;
+  }
+  #footer-dark ul{
+    border-top: 1px solid #4e4e4e;
+    margin: 0;
+  }
+  #footer-dark ul li{
+    background: #303030;
+    padding: 15px 10px;
+    margin: 0;
+    border-bottom: 1px solid #4e4e4e;
+  }
+  #footer-dark hr{
+    display: none;
+  }
+  #footer-search{
+    text-align: center;
+    overflow: hidden;
+  }
+  #footer-search{
+    margin: 10px 10px 40px 10px;
+  }
+  #footer-dark #footer-search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.3em;
+  }
+  #footer-black span{
+    display: block;
+  }
+  #footer-contact{
+    margin-top: 0;
+  }
+
+
+  /* To top */
+  #to-top-button{
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    width: 95px;
+  }
+
+  
+  /* Default page */
+  #default-page .content-section h3{
+  margin-bottom: 0;
+  margin-top: 30px;
+  }
+  #default-page h1{
+    margin-bottom: 20px;
+  }
+  #default-page h2{
+    margin-bottom: 10px;
+  }
+
+
+  /* Login options panel mobile styling */
+  #login-options-panel .container{
+    padding: 0;
+  }
+  #login-options-panel .one-third{
+    margin: 0;
+    border-right: 0;
+    border-bottom: 1px solid #6b6a6a;
+    padding: 0;
+    background: #595555;
+  }
+  #login-options-panel .one-third a{
+    padding: 2px 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    font-family: 'proxima-nova', 'museo-sans', helvetica, clean, sans-serif;
+  }
+  #login-options-panel .one-third a:active{
+    background: #2ea598;
+  }
+  #login-options-panel .one-third a:hover {
+    background: #444444;
+  }
+  #login-options-panel .one-third:last-child span{
+    position: relative;
+    left: auto;
+  }
+  
+
+}

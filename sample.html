@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>MedicinesComplete - Example page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/x-icon" rel="shortcut icon" href="assets/images/system/favicon.ico">
+  <link rel="stylesheet" media="screen" href="assets/stylesheets/base.css">
+  <link rel="stylesheet" media="screen" href="assets/stylesheets/base-sections.css">  
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/ie7-fixes.css">
+  <![endif]-->
+
+  <!--[if IE 8]>  
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/ie8-fixes.css">
+  <![endif]-->  
+
+  <!-- We put Modernizer in the page head to detect JS (and this avoids flickering DOM elements) -->
+  <script type="text/javascript" src="assets/javascripts/libs/modernizr.js"></script>
+
+  <!-- Typekit in page head to avoid flickering fonts -->
+  <script type="text/javascript" src="//use.typekit.net/nvc7avz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body id="default-page">
+
+  <!-- Brand Header (logo / search) -->
+  <div class="section" id="brand-header">
+    <div class="container clear">
+      <a href="index.html" class="left block logo" title="Go to the homepage">
+        <img src="assets/images/logo.png" alt="`MedicinesComplete Logo"/>
+      </a>
+
+      <!-- Search box -->
+      <form class="right nomobile" id="header-search">
+        <input type="search" id="header-search-input" placeholder="Search for a generic, brand name or interaction" title="Search our website"/>
+        <input type="submit" id="header-search-button" name="search" class="btn-search" value="Go" title="Submit your search"/>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Main Page Navigation -->
+  <div class="section" id="nav-header">
+    <div class="container clear">
+      <a href="javascript:;" class="nav-toggle nodesktop notablet nomobile icon-list-mobile" title="Open the Mobile/Tablet Menu"></a>
+      <a href="javascript:;" class="nav-search nodesktop notablet nomobile icon-search-mobile" title="Open the Mobile Search Panel"></a>
+
+      <h1 class="nodesktop showtablet showmobile">Example page</h1>
+
+      <!-- Main menu -->
+      <div class="navigation">      
+        <ul class="menu">
+          <li><a href="index.html" title="Open the Home Page">Home</a></li>
+          <li><a href="publications.html" title="Open the Our Publications Page">Our Publications</a></li>
+          <li><a href="subscribe/index.html" title="Open the Subscribe Page">Subscribe</a></li>
+          <li><a href="product-updates.html" title="Open the Product Updates Page">Product Updates</a></li>
+          <li><a href="contact.html" title="Open the Contact Us Page">Contact Us</a></li>
+          <li><a href="help.html" title="Open the Help Page">Help</a></li>
+
+          <!-- Alternative Mobile / tablet sign in form -->
+          <li class="nodesktop showtablet showmobile open" id="mobile-signin">
+            <h3>Sign in</h3>
+
+            <form action="index-signedin.html" id="login-form-mobile">
+              <div class="field-inline">
+                <label for="mobile-username" class="nomobile">Email</label>
+                <input type="email" placeholder="Email" id="mobile-username" name="username" required/>
+              </div>
+
+              <div class="field-inline last-field">
+                <label for="mobile-password" class="nomobile">Password</label>
+                <input type="password" placeholder="Password" id="mobile-password" name="password" required/>
+              </div>
+
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Sign in" id="mobile-btn-login" name="login">
+
+              <div class="login-options">
+                <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+
+                <label><input type="checkbox" class="remember"/>Remember Me</label>
+              </div>
+              <!-- Show this message when the login fails (invalid password, no account found etc) -->
+              <!-- <div class="error-box clear">User name/password combination not found.</div> -->
+            </form>
+          </li>
+
+          <!-- Alternative Mobile / Tablet access code form -->
+          <li class="nodesktop showtablet showmobile" id="mobile-access-code">
+            <h3>Enter an Access Code</h3>
+            <p>Enter an access code to add a subscription purchased elsewhere.</p>
+
+            <form id="authentication-code-form-mobile" action="subscribe/choose-publications.html">
+              <div class="field-inline last-field">
+                <input type="text" placeholder="Access Code" name="access-code" required/>
+              </div>
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Redeem your code" name="access-code-submit">
+              <!-- Show this box when there is an access code error -->
+              <!-- <div class="error-box clear">Access code not found.</div> -->
+            </form>
+
+          </li>
+        </ul>
+      </div>
+
+      <a id="signin-btn" class="right btn-bright btn-medium icon-right notablet nomobile" href="javascript:;" title="Open the Sign in panel">Sign in <i class="icon-arrow-down"></i></a> 
+
+      <!-- Search box mobile only -->
+      <form class="nodesktop notablet showmobile" id="mobile-search">
+        <div id="mobile-search-container">
+          <input type="search" id="mobile-search-input" placeholder="Search" name="search"/>
+          <input type="submit" id="mobile-search-button" class="btn-search" value="Go" name="search-submit"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Sign in panel -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="global-menu notablet nomobile" id="signin-panel">
+    <!-- Login form -->
+    <div class="container section open" id="login-section">
+      <div class="row">
+        <div class="col twelve">
+          <form action="index-signedin.html" id="login-form">
+
+           <h3>Sign in</h3>
+
+            <div class="field-inline">
+              <label for="username">Email</label>
+              <input type="email" placeholder="Email" id="username" name="username" required/>
+            </div>
+            
+            <div class="field-inline">
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" name="password" required/>
+            </div>
+
+            <input class="btn-submit btn-medium icon-right right" type="submit" value="Sign in" id="btn-login" name="login">
+
+
+            <div class="login-options right">
+              <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+              <label><input type="checkbox" class="remember"/>Remember Me</label>
+            </div>
+
+            <!-- Show this box when the user enters invalid login credentials -->
+            <!-- <div class="error-box clear">User Name/password combination not found.</div> -->
+          </form>         
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Access code panel -->
+    <div class="container section" id="authentication-code-section">
+     <div class="row">
+        <div class="col five tablet-four mobile-full">
+          <h3>Enter an Access Code</h3>
+          <p>Enter an access code to add a subscription purchased elsewhere.</p>
+        </div>
+
+        <div class="col seven tablet-eight mobile-full">
+          <form id="authentication-code-form" action="subscribe/choose-publications.html">
+            <div class="field-inline">
+              <input type="text" placeholder="Access Code" id="access-code" name="access-code" required/>
+            </div>
+            <input class="btn-submit btn-medium right" type="submit" value="Redeem your code" id="btn-redeem" name="access-code-submit">
+            <!-- Show this box when there is an access code error -->
+            <!-- <div class="error-box clear">Email address not found.</div> -->
+          </form>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+
+  <!-- Login options panel -->
+  <div class="section global-menu" id="login-options-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col one-third mobile-full">
+          <a href="javascript:;" id="access-code-toggle">Enter an access code</a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <a href="#" target="_blank"><img src="assets/images/system/athens.png" class="nomobile" alt="Athens"/> <span>Sign in via OpenAthens</span></a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <a href="#" target="_blank"><img src="assets/images/system/ukfederation.png" class="nomobile" alt="UK Federation"/>
+            <span>Sign in via your home organisation</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Password recovery form -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="section global-menu notablet nomobile" id="password-recovery-panel">
+    <form id="password-recovery-form">
+      <div class="container clear">
+        <div class="row">
+          <div class="col five tablet-four mobile-full">
+            <h3>Forgot Password</h3>
+
+            <p>Enter the email address you used for your subscription and we’ll send you instructions to reset your password.</p>
+          </div>
+
+          <div class="col seven tablet-eight mobile-full">
+
+            <div class="field-inline">
+              <input type="email" placeholder="Email Address" id="email" name="email" required/>
+            </div>
+
+            <input class="btn-submit btn-medium right" type="submit" value="Send Reset Instructions" id="btn-recover" name="recovery">
+
+            <a href="javascript:;" class="password-recovery-btn notablet nomobile">Login</a>
+          </div>
+        </div>
+
+        <!-- Show this box when the email address doesn't exist -->
+        <!-- <div class="error-box clear">Email address not found.</div> -->
+
+        <!-- Show this box when the user submits the recovery form -->
+        <!-- <div class="succes-box clear">Instructions to reset your password have been sent to you. Please check your email.</div> -->
+      </div>
+    </form>
+  </div>
+  
+
+  <div class="section content-section container">
+    <div class="row">
+      <div class="col twelve">
+        <h2>Page Title</h2>
+      </div>
+    </div>
+
+    <!-- Single column layout -->
+    <div class="row">
+      <div class="col twelve mobile-full">
+        <h1>Heading</h1>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+        <p>A small river named Duden !ows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences !y into your mouth.</p>
+
+        <h1>Heading</h1>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+        <p>A small river named Duden !ows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences !y into your mouth.</p>
+
+        <h3>Subheading</h3>
+        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.</p>
+
+        <h3>Subheading</h3>
+        <p>Completely impact multifunctional processes and wireless supply chains. Dynamically engage business meta-services for market-driven data. Collaboratively restore cross-platform users before client-centered manufactured products.</p>
+
+        <p>Continually coordinate stand-alone applications rather than virtual communities. Dynamically optimize fully researched results before stand-alone human capital. Completely predominate seamless synergy via</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section grey content-section">
+    <div class="container">
+      <div class="row">
+        <h1>Two Columns</h1>
+      </div>
+
+      <div class="row">
+        <div class="col six mobile-full">
+          <h4>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</h4>
+          <a class="btn btn-large btn-mobile-full no-mobile-border-box" href="#">Example Button (large)</a>
+        </div>
+
+        <div class="col six mobile-full">
+          <h4>A small river named Duden !ows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences !y into your mouth.</h4>
+          <a class="btn btn-medium btn-mobile-full no-mobile-border-box" href="#">Example Button (medium)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section container content-section">
+    <div class="row">
+      <h1>Three Columns</h1>
+    </div>
+    <div class="row">
+      <div class="col one-third mobile-full">
+        <h2>Column One</h2>
+        <p>A small river named Duden !ows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences !y into your mouth.</p>
+
+      </div>
+
+      <div class="col one-third mobile-full">
+        <h2>Column Two</h2>
+        <p>A small river named Duden !ows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences !y into your mouth.</p>
+      </div>
+
+      <div class="col one-third mobile-full">
+        <h2>Column Three</h2>
+        <ul>
+          <li>Assertively evolve long-term high-impact vortals through visionary solutions.</li>
+          
+          <li>Completely impact multifunctional processes and wireless supply chains.</li>
+          
+          <li>Continually coordinate stand-alone applications rather than virtual communities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col twelve">
+        <h1>Succes and Error Messages</h1>
+        <div class="error-box">
+          Database error, please try again later
+        </div>
+
+        <div class="succes-box">
+          Thank you for subscribing to our newsletter
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div id="footer-dark" class="section">
+    <div class="container clear">
+      <a href="javascript:;" id="to-top-button">Back to top</a>
+      <div class="row clear">
+
+        <div class="col four nomobile">
+          <ul class="menu-big">
+            <li><a class="active" href="index.html" title="Home Page">Home</a></li>
+            <li><a href="publications.html" title="Our Publications Page">Our Publications</a></li>
+            <li><a href="subscribe/index.html" title="Subscribe Page">Subscribe</a></li>
+            <li><a href="product-updates.html" title="Product Updates Page">Product Updates</a></li>
+            <li><a href="contact.html" title="Contact Us Page">Contact Us</a></li>
+            <li><a href="help.html" title="Help Page">Help</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col four mobile-full">
+          <h2>Search MedicinesComplete</h2>
+          <form id="footer-search">      
+            <input class="icon-search-grey no-mobile-border-box" id="footer-search-input" type="search" name="" value="" placeholder="Search" /> 
+          </form>
+        </div>
+
+        <div class="col four mobile-full" id="footer-contact">
+          <h2>Contact Us</h2>      
+          <p>Contact our Customer Service Team anytime <b>Monday</b> to <b>Friday</b> between 9am and 5pm (GMT).</p>
+          <ul>
+            <li>Telephone: +44 (0) 207 572 2266</li>
+            <li>Email: <a href="mailto:opsteam@rpharms.com" title="Email us">opsteam@rpharms.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row clear">
+        <div class="col four nomobile">
+          <hr/>
+          <ul>
+            <li><a href="" title="Read our Accessibility guidelines">Accessibility</a></li>
+            <li><a href="" title="Read our Cookie and Privacy Policies">Cookie and Privacy Policy</a></li>
+            <li><a href="" title="View our Site Map">Site map</a></li>
+            <li><a href="" title="Read our Terms and Conditions">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col four nomobile">
+          <hr/>
+
+          <p>Our other sites: <a href="http://www.pharmpress.com" target="_blank" title="Visit the Pharmaceutical Press website">Pharmaceutical Press</a> and <a href="http://www.rpharms.com/" target="_blank" title="Visit the Royal Pharmaceutical Society website">The Royal Pharmaceutical Society</a></p>
+        </div>
+
+
+        <div class="col four mobile-full">
+          <hr/>
+
+          <ul>
+            <li><a class="icon-left icon-twitter" target="_blank" href="https://twitter.com/PharmPress/" title="Open our Twitter page">Follow us on Twitter</a></li>
+            <li><a class="icon-left icon-facebook" target="_blank" href="https://www.facebook.com/PharmPress" title="Open our Facebook page">Find us on Facebook</a></li>
+            <li><a class="icon-left icon-mail" target="_blank" href="http://www.pharmpress.com/mc-alerts.asp?utm_source=medicinescomplete" title="Subscribe to our email newsletter">Subscribe to our email newsletter</a></li>
+          </ul>
+        </div>
+
+      </div>  
+    </div>
+  </div>
+
+
+  <!-- Footer Copy -->
+  <div class="section " id="footer-black">
+    <div class="container">
+      MedicinesComplete &copy; Pharmaceutical Press 2013. <span>All Rights Reserved.</span>
+    </div>
+  </div>
+
+  <!-- Load jQuery and main libraries-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- JQuery form validation -->
+  <script type="text/javascript" src="assets/javascripts/libs/jquery.validate.min.js"></script>
+
+  <!-- Main JS File -->
+  <script type="text/javascript" src="assets/javascripts/default.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your website's ID. -->
+  <script>
+  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+/* ==========================================================================
+/* Specific Sections for the Home Page
+========================================================================== */
+
+/* Audience nav (tabs) */
+#audience-header{
+  height: 276px;
+  border-top: 4px solid #ee7266;
+}
+/* Header images for the audience header */
+#audience-header.community-pharmacies-content{
+  background: #f0f0f0 url('../images/home/benefits-community-pharmacies.png') no-repeat top left;
+}
+#audience-header.pharmaceutical-industry-content{
+  background: #f0f0f0 url('../images/home/benefits-pharmaceutical-industry.png') no-repeat top left;
+}
+#audience-header.hospitals-and-community-care-content{
+  background: #f0f0f0 url('../images/home/benefits-hospitals-community-care.png') no-repeat top left;
+}
+#audience-header.academics-and-students-content{
+  background: #f0f0f0 url('../images/home/benefits-academics-students.png') no-repeat top left;
+}
+#audience-header.community-pharmacies-content, 
+#audience-header.pharmaceutical-industry-content, 
+#audience-header.hospitals-and-community-care-content, 
+#audience-header.academics-and-students-content{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#audience-header .btn-down{
+  float: right;
+  padding: 15px;
+}
+#audience-nav{
+  background: #e6e6e6;
+  border-bottom: 1px solid #d0d0d0;
+  position: relative;
+}
+#audience-nav .container{
+  position: relative;
+}
+#audience-nav .tabs{
+  list-style-type : none;
+  display: inline-block;
+}
+#audience-nav .tabs li, #audience-nav .tabs .active{
+  float: left;
+  background: #f1f0f0;
+  max-width : 195px;
+  font-size: 1.1em;
+  display: table; 
+  background: #f1f0f0;
+  border-left: 1px solid #d9d9d9;
+}
+#audience-nav .tabs .active{
+  background: #fff;
+  box-shadow: 0 3px 2px #fff;
+  -webkit-box-shadow: 0 3px 2px #fff;
+  -moz-box-shadow: 0 3px 2px #fff;
+}
+#audience-nav .tabs .tab-info{
+  max-width: 240px;
+  background: none;
+  border-left: none;
+}
+#audience-nav .tabs li:last-child{
+  border-right: 1px solid #d9d9d9;
+}
+#audience-nav .tabs li a, #audience-nav .tabs .tab-info span{
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  display: table-cell;
+  vertical-align: middle;
+  padding : 0 30px 0 25px; 
+  height: 72px; 
+}
+#audience-nav .tabs li a:hover{
+  background: #fafafa;
+}
+#audience-nav .tabs .tab-info span{
+  font-family: 'proxima-nova', Helvetica, sans-serif;
+  text-align: right;
+  color: #4c4c4c;
+  font-size: 1em;
+}
+#audience-nav .tabs .active{
+  z-index: 200;
+}
+#audience-nav .tabs .active a{
+  color: #4c4c4c;
+}
+
+
+/* Audience Content */
+#audience-content .spacer{
+  border-bottom: 1px solid #26505e;
+  height: 43px;
+}
+#audience-content #audience-tab-content .content-section:first-child{
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+  background: url('../images/home/testimonials.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  border-top: 1px solid #3c4348;
+  border-bottom: 1px solid #5e6e71;
+}
+.testimonial-carousel .eight{
+  padding-right: 3%;
+  width: 62%;
+}
+.testimonial-carousel .four{
+  width: 32%;
+}
+.testimonial-carousel .border-right{
+  margin-right: -1px;
+  border-right: 1px solid #fff;
+}
+.testimonial-carousel .border-column{
+  padding-left: 15px;
+}
+.testimonial-carousel ul li{
+  margin-bottom: 5px;
+}
+.testimonial-carousel .eight h5{
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+/* Responsive Styling (for tablet and mobile)
+========================================================================== */
+/* Tablet + Mobile (combined styling for menus) */
+@media only screen and (max-width: 939px) {
+
+
+  /* Audience nav (tabs) */
+  #audience-nav{
+    background: #e6e6e6;
+    border-bottom: 0;
+  }
+  #audience-nav .container{
+    padding: 0;
+  }
+  #audience-nav br{
+    display: none;
+  }
+  #audience-nav .tab-info{
+    display: block;
+  }
+  #audience-nav .tabs{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    z-index: 300;
+  }
+  #audience-nav .tabs li{
+    width: 100%;
+    background: #f0f0f0;
+  }
+  #audience-nav .tabs li:last-child{
+    border-bottom: 0;
+  }
+  #audience-nav .tabs li a{
+    padding: 0 10px 0 10px;
+    height: 50px;
+    border-right: 1px solid #bebebe;
+    border-left: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+  }
+  #audience-nav .tabs .active a{
+    background: #e6e6e6;
+    border-bottom: 0;
+  }
+  #audience-nav .active{
+    background: #f0f0f0;
+      border-bottom: 1px solid #d0d0d0;
+  }
+  #audience-nav .tabs-down-icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-left: 1px solid #5d6463;
+    background: #2ea598 url('../images/icons/icon-arrow-down-big.png') no-repeat center center;
+    cursor: pointer;
+    border-bottom: 1px solid #299085;
+    z-index: 500;
+  }
+  #audience-nav .tabs .tab-info{ 
+    display: none;
+  }
+  #audience-nav .close li{
+    display: none;
+  }
+
+
+  /* Testimonial Carousel */
+  .testimonial-carousel h6{
+    font-size: 1.2em;
+  }
+
+
+}
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+
+  /* Audience nav */
+  #audience-nav .tabs li a{
+    width: 698px;
+    display: block;
+    line-height: 50px;
+  }
+
+
+  /* Audience content */
+  #audience-content .eight{
+    margin-top: 0;
+  }
+  #audience-content .trial-section{
+    border-bottom: 0 solid #e6e6e6;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  #audience-content .trial-section h4{
+    width: 506px;
+    font-size: 1.3em;
+    float: left;
+    margin: 0 10px 0 0;
+    line-height: 1.6em;
+  }
+  #audience-content .trial-section a{
+    float: left;
+    display: table-cell;
+    vertical-align: center;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+
+
+  /* Audience header */
+  #audience-header{
+    background-position: center top; 
+    height: 240px;
+  }
+  #audience-header .btn-down{
+    display: none;
+  }
+  #audience-nav{
+    overflow: hidden;
+  }
+  #audience-nav .tabs li a{
+    width: auto;
+    display: block;
+    line-height: 50px;
+  }
+  #audience-nav  .tabs li, #audience-nav .tabs .active{
+    max-width: 100%;
+  }
+  #audience-content .content-section:first-child{
+    padding-top: 32px;
+  }
+  #audience-content #audience-tab-content .content-section:first-child{
+    padding-bottom: 32px;
+  }
+
+  
+  /* Testimonial carousel */
+  .testimonial-carousel h6{
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+  }
+  .testimonial-carousel h5{
+    font-size: 1.1em;
+  }
+  .testimonial-carousel .four, .testimonial-carousel .eight{
+    width: 100%;
+  }
+  .testimonial-carousel .eight{
+    padding-right: 0;
+  }
+  .testimonial-carousel .icon-bubble, .testimonial-carousel .icon-testimonials{
+    background-position: center top;
+    width: 100%;
+    display: block;
+  } 
+  .testimonial-carousel .border-right{
+    border: none;
+  }
+  .testimonial-carousel .border-column{
+    padding: 0;
+  }
+  .testimonial-carousel{
+    padding: 40px 0 40px 0;
+  }
+  
+
+}

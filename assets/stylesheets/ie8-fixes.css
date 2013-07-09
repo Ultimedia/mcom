@@ -1,0 +1,45 @@
+/* General fixes */
+.container {
+  min-width: 940px;
+}
+
+/* Subscribe section floating fix */
+#subscribe-section .olive{
+  height: 40px;
+  display: inline-block;
+}
+#subscribe-section .olive a{
+  color: #fff;
+  text-decoration: underline;;
+}
+
+
+/* Subscrine page fixes */
+/* Subscribe header */
+#subscribe-page #subscribe-header .carousel-text{
+	margin-top: 90px;
+}
+
+#subscribe-page #subscribe-header a{
+	margin-right: 90px;
+	margin-top: 130px;
+}
+
+select.select-grey{
+	font-size: 1em;
+}
+
+
+
+/* Background alignment fix */
+.testimonial-carousel {
+	background: #4f5050 url('../images/home/testimonials.png') no-repeat;
+	background-position: center top;
+}
+#audience-header.community-pharmacies-content, 
+#audience-header.pharmaceutical-industry-content, 
+#audience-header.hospitals-and-community-care-content, 
+#audience-header.academics-and-students-content,
+#subscribe-header{
+	background-position: center top;
+}

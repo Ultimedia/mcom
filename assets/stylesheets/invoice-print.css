@@ -1,0 +1,112 @@
+/* ==========================================================================
+/* Invoice print CSS
+   ========================================================================== */
+body{
+	max-width: 670px;
+	min-width: 670px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* Hide sections */
+#nav-header, 
+#signin-panel, 
+#footer-dark, 
+#footer-black, 
+.breadcrumbs, 
+#password-create-section,
+#print-invoice-btn,
+#password-recovery-panel,
+#brand-header #header-search{
+  display: none;
+}
+
+
+/* Invoice address section */
+#invoice .six{
+	width: 335px;
+	float: left;
+	display: inline-block;
+  margin-bottom: 40px;
+}
+#invoice{
+	margin-top: 30px;
+}
+#invoice ul{
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.8em;
+}
+#invoice ul li{
+	padding-bottom: 8px;
+}
+#invoice h2{
+	border-bottom: 1px solid #858585;
+	font-size: 1.3em;
+}
+
+
+/* Invoice table */
+#invoice-table{
+	font-size: 0.8em;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+  border-left: 0;
+  background-color: #fff;
+  border-spacing: 0;
+}
+#invoice-table th,
+#invoice-table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #eeeeee;
+}
+#invoice-table th{
+	font-size: 1em;
+	border-top: 0;
+}
+#invoice-table tr td{
+	padding: 10px 0;
+}
+#invoice-table .border-top td{
+	border-top: 2px solid #d0d0d0;
+}
+#invoice-table tr:last-child td{
+	border-bottom: 0;
+}
+#invoice-table tr td:first-child{
+	width: 335px;
+}
+#invoice-table tr th:last-child, #invoice-table tr td:last-child{
+	text-align: right;
+}
+#invoice-table tr:last-child td{
+	font-size: 1.2em;
+}
+#invoice-table .subscription-date{
+	text-align: center;
+}
+
+
+/* Bottom section (data - shopping cart - world pay transaction id) */
+.one-third{
+	width: 223px;
+	display: inline-block;
+	float: left;
+	margin-top: 60px;
+	font-size: 0.8em;
+	border-top: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	padding: 15px 0;
+}
+.align-right{
+	text-align: right;
+}
+.align-center{
+	text-align: center;
+}

@@ -1,0 +1,304 @@
+/* ==========================================================================
+/* Specific Sections for the Publications Page
+   ========================================================================== */
+/* Hero Carousel */
+#carousel{
+  background: #fff url('../images/publications/carousel/publications-header.png') no-repeat center right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#carousel .carousel-text{
+  max-width: 670px;
+}
+#carousel .valign{
+  float: left;
+}
+
+
+/* Factsheet section */
+#factsheet-section{
+  border-top: 3px solid #ee7266;
+}
+#factsheet-section h1{
+  margin-bottom: 10px;
+}
+#factsheet{
+  margin-top: 10px;
+}
+#factsheet p{
+  font-size: 1.1em;
+}
+#factsheet .half{
+  display: inline;
+  float: left;
+  margin-top: 20px;
+}
+#factsheet .quarter{
+  display: inline;
+  width: 37%;
+}
+#close-side-panel{
+  display: none;
+}
+
+
+/* Publication action menu */
+#publication-actions{
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 42px;
+  overflow: auto;
+  background: #f0f0f0;
+}
+#publication-actions li{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #dbdbdb;
+  float: left;
+}
+#publication-actions li a{
+  font-size: 15px;
+  position: relative;
+  margin: 0;
+  padding-left: 25px;
+  padding: 12px 12px 12px 40px;
+  display: block;
+}
+#publication-actions li a:hover{
+  background: #fafafa;
+}
+
+
+/* Publications Menu */
+#publications-column ul{
+  background: #f0f0f0;
+  border: 1px solid #dbdbdb;
+  padding: 0;
+}
+#publications-column ul li{
+  list-style-type: none;
+  border-bottom: 1px solid #dbdbdb;
+  clear: both;
+  margin: 0;
+  display: block;
+}
+#publications-column ul li:last-child{
+  border-bottom: none;
+}
+#publications-column ul li a{
+  color: #4c4c4c;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: 'museo-sans','proxima-nova',sans-serif;
+  padding: 10px 14px;
+  display: block;
+  min-height: 46px;
+}
+#publications-column ul li a:hover{
+  background-color: #fafafa;
+}
+#publications-column ul li img{
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 0;
+  border: 3px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+#publications-column .active{
+  background: #fff url('../images/icons/icon-publication-selected.png') no-repeat 7px 28px;
+}
+#publications-column .active img{
+  border-color: #ee7266;
+}
+
+
+/* Subscribe subheader */
+#subscribe-header{
+  background: #f0f0f0 url('../images/publications/publications-subheader.png') no-repeat top left;
+  height: 276px;
+  border-top: 4px solid #cfdacb;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#subscribe-header .btn-down{
+  float: right;
+  padding: 15px;
+  background: #cfdacb url('../images/icons/icon-arrow-down-big-green.png') center center no-repeat;
+}
+
+
+/* Publications filter */
+#publications-filter{
+  display: block;
+  margin-bottom: 13px;
+}
+#publications-filter label{
+  display: inline;
+  font-weight: normal;
+  margin: 0 5px 0 0px;
+  font-size: 1.1em;
+}
+#publications-filter select{
+  width: auto;
+  overflow: hidden;
+ }
+#publications-filter .select-blue-box, #publications-filter .select-blue-box select{
+  width: 206px;
+  cursor: pointer;
+  display: inline-block;
+}
+#publications-filter .yaselect-wrap{
+  padding: 10px 8px;
+}
+/* Hide the filter when there is no js */
+.no-js #publications-filter{
+  display: none;
+}
+
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+
+  /* Publicatin filter */
+  #publications-filter select{
+    width: auto;
+    margin-left: 0px;
+  }
+
+  #publications-filter .select-blue-box, #publications-filter .select-blue-box select{
+    width: 216px;
+  }
+
+
+  /* Factsheet */
+  #factsheet .quarter{
+    display: inline-block;
+    width: 40%;
+    float: left;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+
+
+  #publications-column{
+    margin-top: 0;
+  }
+
+  /* Carousel */
+  #hero-carousel .carousel-text{
+    max-width: 100%;
+  }
+
+
+  /* Publications filter */
+  #publications-filter label{
+    display: none;
+  }
+  #publications-filter .select-blue-box, #publications-filter .select-blue-box select{
+    width: 100%;
+    margin-left: 0px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+
+  
+  /* Reposition subscribe header image */
+  #subscribe-header{
+    background-position: right top;
+  }
+
+
+  /* Mobile faxtsheet sidepanel */
+  #publication-actions{
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  #publication-actions li{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  #publication-actions li:last-child{
+    border-bottom: 0;
+  }
+
+
+  /* Factsheet */
+  .no-js #factsheet{
+    display: inline;
+    width: 100%;
+  }
+  .js #factsheet{
+    position: fixed;
+    top: 0;
+    width: 85%;
+    right: 100%;  
+    height: 100%;
+    display: block;
+    background: #fff;
+    z-index: 100;
+    -webkit-box-shadow: -5px 0px 15px rgba(50, 50, 50, 0.33);
+    -moz-box-shadow:    -5px 0px 15px rgba(50, 50, 50, 0.33);
+    box-shadow:         -5px 0px 15px rgba(50, 50, 50, 0.33);
+    border-left: 3px solid #ee7266;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #factsheet-content{
+    overflow-y:scroll;
+    height: 100%;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  #publication-actions li{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #dbdbdb;
+    float: left;
+  }
+  #factsheet .quarter{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+  }
+  #factsheet .quarter:last-child{
+    margin-top: 10px;
+  }
+  #factsheet-section .col:first-child{
+    margin-top: 0;
+  }
+  #close-side-panel{
+    position: fixed;
+    padding: 20px 8px;
+    top: 50%;
+    z-index: 50;
+    overflow: visible;
+    display: none;
+    transition: none; 
+    -moz-transition: none; 
+    -ms-transition: none; 
+    -o-transition: none; 
+    -webkit-transition: none;
+  }
+
+
+}

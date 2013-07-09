@@ -1,0 +1,151 @@
+/* ==========================================================================
+/* Specific Sections for the Contact Page
+========================================================================== */
+#contact-section small{
+  margin-top: 18px;
+  display: block;
+}
+
+
+/* Contact form */ 
+#contact-form .row h2{
+  margin-top: 40px;
+  padding-top: 40px;
+}
+#contact-form .row fieldset h2{
+  margin-top: 11px;
+  border: 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 1.3em;
+  font-family: 'proxima-nova', helvetica, sans-serif;
+}
+#contact-form fieldset:last-child{
+  margin-bottom: 0;
+}
+#contact-form input[type=submit]{
+  background: #2ea598 url('../images/icons/icon-contact.png') no-repeat 80% center;
+  padding-right: 50px;
+} 
+#contact-form input[type=submit]:hover{
+  background-color: #1f6b62;
+}
+#contact-form hr{
+  margin-top: 75px;
+  margin-bottom: 13px;
+}
+#contact-section #contact-form .twelve{
+  margin-top: 90px;
+} 
+
+
+/* Publication list (specific for the insitutional enquiries form) */
+#publication-list ul{
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: none;
+  width: 210px;
+}
+.form-instructions{
+  font-size: 1.15em;
+  margin:0;
+}
+#publication-list ul:first-child{
+  margin-right: 30px;
+}
+#publication-list{
+  margin-top: 20px;
+  overflow: auto;
+}
+#institutional-enquiries-page #contact-form hr{
+  margin-top: 15px;
+}
+
+
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+
+  /* Contact form */ 
+  #contact-section input[type="submit"]{
+    float: right;
+  }
+  #contact-section form hr{
+    margin-top: 20px;
+  }  
+  #contact-section #message{
+    height: 297px;
+  }
+
+
+  /* Checkbox list */
+  #publication-list ul{
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+    width: 160px;
+  }
+  #publication-list ul:first-child{
+    margin-right: 23px;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+
+
+  /* Contact form */ 
+  #publication-list ul{
+    width: 100%;
+  }
+  #publication-list ul:first-child{
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  #publication-list ul:last-child{
+    margin-top: 10px;
+  }
+  #contact-section #contact-form .twelve{
+    margin-top: 30px;
+  }
+  #contact-section .field input[type=text]{
+    width: 100%;
+    margin-bottom: 5px;
+    margin: 0 0 5px 0;
+  }
+  #contact-section input[type="submit"]{
+    clear: both;
+    width: 100%;
+  }
+  #contact-section form{
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  #contact-section form hr{
+    display: none;
+  }
+  #contact-section form textarea{
+    height: 200px;
+  }
+  #contact-form input[type=submit]{
+    background-position: 90% center;
+  }
+  #contact-form .row h2{
+    margin-top: 0;
+    border-top: 0;
+    margin-bottom: 20px;
+  }
+  #contact-form input[type=submit]{
+    padding-right: 0;
+  }
+  #contact-section .row:nth-child(2) .col:last-child h1 a{
+    font-size: 0.89em;  
+  }
+
+
+}
+

@@ -1,0 +1,392 @@
+.btn-bright:active{
+	color: #fff;
+}
+
+
+/* General fixes */
+.container {
+  min-width: 940px;
+}
+
+/* Carousel */
+#carousel #carousel-dots-container{
+  display: none;
+}
+
+#brand-header{
+	z-index: 9999999;
+}
+
+#autocomplete{
+	z-index: 100000;
+}
+
+
+#publication-order-table input[type=checkbox]{
+	margin-top: 0 !important;
+}
+.license-agreement input[type=checkbox], .promotions input[type=checkbox]{
+	margin-top: 4px !important;
+}
+
+
+#calculate-price-form #country-selection .out + div label{
+	line-height: 1.1em;
+}
+
+
+#select-all-publications{
+	position: absolute;
+	right: 0;
+}
+
+
+#promo-codes-box .promo-code-section{
+	overflow: hidden;
+}
+
+#price-calculation-section{
+	background: #ececec !important; 
+}
+
+
+/* Fix searchbox height */
+#header-search-input{
+  padding-top: 11px;
+  padding-bottom: 12px;
+  height: auto !important;
+}
+
+
+/* Fix password recovery form */
+#password-recovery-form #btn-recover{
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 200px;
+	margin: 0;
+	float: right;
+}
+#password-recovery-form input[type=text]{
+	height: 14px;
+	width: 290px;
+	margin: 0;
+}
+#publication-browse #publication-select{
+	width: 380px;
+	margin: 0;
+}
+#publication-browse input[type=submit]{
+	display: inline;
+	margin: 0;
+}
+#publication-browse .field{
+	width: 300px;
+	margin: 0;
+	padding: 0;
+}
+
+
+#publication-order-table .details div{
+	width: 780px;
+}
+
+
+/* Footer search width */
+#footer-search-input{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 230px;
+}
+
+
+/* Select width */
+select.select-blue{
+	background: #fff !important;
+	color: #000 !important;
+}
+
+
+/* Fix global nav */
+#nav-header .navigation ul li {
+    *display: inline;
+    zoom: 1;
+}
+
+
+/* Fix login button */
+#btn-login{
+	top: 38px;
+	padding-left: 0;
+	padding-right: 20px;
+	width: 130px;
+	margin: 0;
+	height: 42px;
+}
+
+
+/* Add a fixed margin to the carousel text (vertical centering doesn't work in IE7) */
+#carousel .container .row .col > div{
+	margin-top: 100px;
+}
+#carousel .carousel-subscribe .carousel-text input[type=text]{
+	width: 200px;
+	height: 22px;
+}
+
+
+/* Fix line-height / margin bug on the updates list */
+.updates-list li h5, #product-updates-page .updates-list li h5{
+	margin-top: -30px;
+}
+
+
+/* Hide button */
+#subscribe-header .btn-down{
+	display: none;
+}
+
+
+/* Subscribe section floating fix */
+.subscribe-section .olive{
+  height: 40px;
+  display: inline-block;
+}
+.subscribe-section .olive a{
+	color: #fff;
+	text-decoration: underline;;
+}
+
+
+/* Testimomial background */
+.testimonial-carousel {
+	background: #4f5050 url('../images/home/testimonials.png') no-repeat;
+	background-position: center top;
+}
+#audience-header.community-pharmacies-content, 
+#audience-header.pharmaceutical-industry-content, 
+#audience-header.hospitals-and-community-care-content, 
+#audience-header.academics-and-students-content,
+#subscribe-header{
+	background-position: center top;
+}
+
+
+/* Sign in panel */
+#signin-panel input[type=text], #signin-panel input[type=password], #create-account-form input[type=password]{
+  padding: 12px;
+  font-weight: normal;
+  width: 300px;
+  height: auto;
+}
+#create-account-form input[type=password]{
+	width: 230px;
+}
+#signin-panel .error-container, #password-recovery-panel .error-container{
+	top: 40px;
+}
+#signin-panel label{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	display: inline-block;
+}
+#signin-panel input[type=submit]{
+	display: inline-block;
+	float: none;
+}
+#signin-panel div label.error{
+	line-height: 7px;
+}
+
+
+/* Home page fizes */
+#audience-nav .tabs li a, #audience-nav .tabs .tab-info{
+	display: inline-block;
+	padding-top: 20px;
+	height: 65px;
+}
+.testimonial-carousel{
+	border-bottom: 0;
+}
+
+
+
+/* Publications page fixes */
+/* Factsheet download button */
+#publications-page #download-factsheet .icon-download{
+	top: 10px;
+}
+
+
+/* Contact page fixes */
+.input-courtesy-title, .input-courtesy-title label, .input-courtesy-title select{
+	display: inline;
+}
+#contact-page #contact-section  .input-name, #contact-page #contact-section  .input-name input[type=text], 
+#institutional-enquiries-page #contact-form .input-name, #institutional-enquiries-page #contact-form .input-name input[type=text]{
+	display: inline;
+	margin-left: 5px;
+	width: 287px
+}
+
+#contact-page #contact-section input[type=text], #institutional-enquiries-page #contact-form input[type=text]{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 360px;
+}
+#contact-form hr{
+	display: none;
+}
+#contact-form fieldset, #institutional-enquiries-page fieldset{
+	margin-bottom: 0;
+}
+#contact-page #contact-section input[type=submit], #institutional-enquiries-page #contact-form input[type=submit]{
+	padding-left: 20px;
+	padding-right: 0;
+	width: 120px;
+	text-align: left;
+}
+#contact-page #contact-section textarea{
+	padding: 10px;
+	width: 430px;
+}
+.input-name, .input-name input[type=text]{
+  width: 278px;
+  margin-right: 0;
+  display: block;
+}
+div.input-surname{
+	clear: both;
+  	margin-bottom: 0;
+}
+.input-surname, .input-surname input[type=text]{
+  width: 344px;
+  margin-left: 0;
+  display: block;
+  float: none;
+}
+
+
+/* Subscrine page fixes */
+/* Subscribe header */
+#subscribe-page #subscribe-header .carousel-text{
+	margin-top: 90px;
+}
+
+#subscribe-page #subscribe-header a{
+	margin-right: 90px;
+	margin-top: 130px;
+}
+ #sign-in-header input[type=text], #sign-in-header input[type=password]{
+ 	height: auto;
+ 	width: 286px;
+ }
+ #application-login-form .password-recovery-btn{
+	float: right;
+	margin-right: 170px;
+}
+
+#sign-in-header div label.error, #password-header div label.error {
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+}
+ #sign-in-header label, #promo-codes-box label, #create-account-form label{
+ 	height: 35px;
+ 	display: inline-block;
+ }
+	
+
+
+
+#subscribe-application .breadcrumbs li{
+	width: 23%;
+}
+#subscribe-application .breadcrumb-line{
+	display: none;
+}
+
+/* Help page fixes */
+#help-page #subscribe-form input[type=submit]{
+	padding-right: 0;
+	padding-left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#help-page #subscribe-form input[type=text]{
+	width: 175px;
+	margin-right: 5px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	display: inline;
+}
+
+
+#register-form input.input-full, #payment-details-form input.input-full{
+	  width: 344px;
+}
+
+#register-form .fixedcolumn, #register-form .fixedcolumn label{
+	width: 344px;
+}
+
+.error-container{
+	text-align: left;
+}
+
+#calculate-price-form #country-selection .out + div label{
+	line-height: 1.1em;
+}
+
+.error-container div{
+	clear: both;
+	display: block;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+#create-account-form input[type=submit]{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.iefloat{
+	float: left;
+	display: block;
+}
+
+#btn-redeem{
+	width: 190px;
+	padding: 0 10px;
+	margin-left: 10px;
+}
+
+#authentication-code-form input[type="text"]{
+	width: 280px
+}
+#authentication-code-form .error{
+
+}
+#signin-panel .login-options{
+	width:480px;
+}
+
+#signin-panel .login-options label{
+	padding: 0;
+}
+
+#login-options.open{
+	display: block;
+}
+
+#signin-panel .login-options label{
+  font-size: 1em;
+  margin-left: 70px;
+}
+
+
+#authentication-code-section{
+	padding-bottom: 20px;
+}

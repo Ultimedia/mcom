@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>MedicinesComplete - Subscribe</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link type="image/x-icon" rel="shortcut icon" href="../assets/images/system/favicon.ico">
+  <link rel="stylesheet" media="screen" href="../assets/stylesheets/base.css">
+  <link rel="stylesheet" media="screen" href="../assets/stylesheets/base-sections.css">  
+  <link rel="stylesheet" media="screen" href="../assets/stylesheets/subscribe-sections.css">  
+  <!--[if IE 7]>
+  <link rel="stylesheet" type="text/css" href="../assets/stylesheets/ie7-fixes.css">
+  <![endif]-->
+
+  <!--[if IE 8]>  
+  <link rel="stylesheet" type="text/css" href="../assets/stylesheets/ie8-fixes.css">
+  <![endif]--> 
+
+  <!-- We put Modernizer in the page head to detect JS (and this avoids flickering DOM elements) -->
+  <script type="text/javascript" src="../assets/javascripts/libs/modernizr.js"></script>
+
+  <!-- Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/nvc7avz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body id="subscribe-page">
+ 
+
+  <!-- Brand Header (logo / search) -->
+  <div class="section" id="brand-header">
+    <div class="container clear">
+      <a href="index.html" class="left block logo">
+        <img src="../assets/images/logo.png" alt="`MedicinesComplete Logo"/>
+      </a>
+      
+      <!-- Search box -->
+      <form class="right nomobile" id="header-search">
+        <input type="search" id="header-search-input" placeholder="Search for a generic, brand name or interaction"/>
+        <input type="submit" id="header-search-button" name="search" class="btn-search" value="Go"/>
+      </form>
+
+      <!-- Autocomplete styles -->
+      <div id="autocomplete" class="nomobile">
+        <div>
+          <h4 class="section-header">Pages</h4>          
+          <ul class="autocomplete-list">
+            <li>
+              <a href="#"><h4>Institutional Subscriptions</h4></a>
+            </li>
+            <li>
+              <a href="#"><h4>Contact and Support</h4></a>
+            </li>
+            <li>
+              <a href=""><h4>Terms and conditions</h4></a>
+            </li>                 
+          </ul>
+
+          <h4 class="section-header">Publications</h4>
+          <ul class="autocomplete-list publications">
+            <li>
+              <a href="">
+                <img src="../assets/images/publications/thumbs/1.afhs.png" alt="AHFS Drug information"/>
+                <h4>AHFS Drug information</h4>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/images/publications/thumbs/2.bnf.png" alt="BNF"/>
+                <h4>BNF</h4>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/images/publications/thumbs/3.bnfchildren.png" alt="BNF for Children"/>
+                <h4>Rules &amp; Guidance for Manufacturers &amp; Distributors</h4>
+              </a>
+            </li>                 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Main Page Navigation -->
+  <div class="section" id="nav-header">
+    <div class="container clear">
+      <a href="javascript:;" class="nav-toggle nodesktop notablet nomobile icon-list-mobile" title="Open Mobile/Tablet Navigation"></a>
+      <a href="javascript:;" class="nav-search nodesktop notablet nomobile icon-search-mobile" title="Open Mobile Search"></a>
+
+      <h1 class="nodesktop showtablet showmobile">Subscribe</h1>
+
+      <!-- Main menu -->
+      <div class="navigation">      
+        <ul class="menu">
+          <li><a href="../index.html" title="Home Page">Home</a></li>
+          <li><a href="../publications.html" title="Our Publications Page">Our Publications</a></li>
+          <li><a href="index.html" class="active" title="Subscribe Page">Subscribe</a></li>
+          <li><a href="../product-updates.html" title="Product Updates Page">Product Updates</a></li>
+          <li><a href="../contact.html" title="Contact Us Page">Contact Us</a></li>
+          <li><a href="../help.html" title="Help Page">Help</a></li>
+
+          <!-- Alternative Mobile / tablet sign in form -->
+          <li class="nodesktop showtablet showmobile open" id="mobile-signin">
+            <h3>Sign in</h3>
+
+            <form action="../index-signedin.html" id="login-form-mobile">
+              <div class="field-inline">
+                <label for="mobile-username" class="nomobile">Email</label>
+                <input type="email" placeholder="Email" id="mobile-username" name="username" required/>
+              </div>
+
+              <div class="field-inline last-field">
+                <label for="mobile-password" class="nomobile">Password</label>
+                <input type="password" placeholder="Password" id="mobile-password" name="password" required/>
+              </div>
+
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Sign in" id="mobile-btn-login" name="login">
+
+              <div class="login-options">
+                <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+
+                <label><input type="checkbox" class="remember"/>Remember Me</label>
+              </div>
+              <!-- Show this message when the login fails (invalid password, no account found etc) -->
+              <!-- <div class="error-box clear">User name/password combination not found.</div> -->
+            </form>
+          </li>
+
+          <!-- Alternative Mobile / Tablet access code form -->
+          <li class="nodesktop showtablet showmobile" id="mobile-access-code">
+            <h3>Enter an Access Code</h3>
+            <p>Enter an access code to add a subscription purchased elsewhere.</p>
+
+            <form id="authentication-code-form-mobile" action="choose-publications.html">
+              <div class="field-inline last-field">
+                <input type="text" placeholder="Access Code" name="access-code" required/>
+              </div>
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Redeem your code" name="access-code-submit">
+              <!-- Show this box when there is an access code error -->
+              <!-- <div class="error-box clear">Access code not found.</div> -->
+            </form>
+
+          </li>
+        </ul>
+      </div>
+
+      <a id="signin-btn" class="right btn-bright btn-medium icon-right notablet nomobile" href="javascript:;" title="Sign in Button">Sign in <i class="icon-arrow-down"></i></a> 
+
+      <!-- Search box mobile only -->
+      <form class="nodesktop notablet showmobile" id="mobile-search">
+        <div id="mobile-search-container">
+          <input type="search" id="mobile-search-input" placeholder="Search"/>
+          <input type="submit" id="mobile-search-button" name="search" class="btn-search" value="Go"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Sign in panel -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="global-menu notablet nomobile" id="signin-panel">
+    <!-- Login form -->
+    <div class="container section open" id="login-section">
+      <div class="row">
+        <div class="col twelve">
+          <form action="../index-signedin.html" id="login-form">
+
+           <h3>Sign in</h3>
+
+            <div class="field-inline">
+              <label for="username">Email</label>
+              <input type="email" placeholder="Email" id="username" name="username" required/>
+            </div>
+            
+            <div class="field-inline">
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" name="password" required/>
+            </div>
+
+            <input class="btn-submit btn-medium icon-right right" type="submit" value="Sign in" id="btn-login" name="login">
+
+
+            <div class="login-options right">
+              <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+              <label><input type="checkbox" class="remember"/>Remember Me</label>
+            </div>
+
+            <!-- Show this box when the user enters invalid login credentials -->
+            <!-- <div class="error-box clear">User Name/password combination not found.</div> -->
+          </form>         
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Access code panel -->
+    <div class="container section" id="authentication-code-section">
+     <div class="row">
+        <div class="col five tablet-four mobile-full">
+          <h3>Enter an Access Code</h3>
+          <p>Enter an access code to add a subscription purchased elsewhere.</p>
+        </div>
+
+        <div class="col seven tablet-eight mobile-full">
+          <form id="authentication-code-form" action="choose-publications.html">
+            <div class="field-inline">
+              <input type="text" placeholder="Access Code" id="access-code" name="access-code" required/>
+            </div>
+            <input class="btn-submit btn-medium right" type="submit" value="Redeem your code" id="btn-redeem" name="access-code-submit">
+            <!-- Show this box when there is an access code error -->
+            <!-- <div class="error-box clear">Email address not found.</div> -->
+          </form>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+
+  <!-- Login options panel -->
+  <div class="section global-menu" id="login-options-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col one-third mobile-full">
+          <a href="javascript:;" id="access-code-toggle">Enter an access code</a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <a href="#" target="_blank"><img src="../assets/images/system/athens.png" class="nomobile" alt="Athens"/> <span>Sign in via OpenAthens</span></a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <a href="#" target="_blank"><img src="../assets/images/system/ukfederation.png" class="nomobile" alt="UK Federation"/>
+            <span>Sign in via your home organisation</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Password recovery form -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="section global-menu notablet nomobile" id="password-recovery-panel">
+    <form id="password-recovery-form">
+      <div class="container clear">
+        <div class="row">
+          <div class="col five tablet-four mobile-full">
+            <h3>Forgot Password</h3>
+
+            <p>Enter the email address you used for your subscription and we’ll send you instructions to reset your password.</p>
+          </div>
+
+          <div class="col seven tablet-eight mobile-full">
+
+            <div class="field-inline">
+              <input type="email" placeholder="Email Address" id="email" name="email" required/>
+            </div>
+
+            <input class="btn-submit btn-medium right" type="submit" value="Send Reset Instructions" id="btn-recover" name="recovery">
+
+            <a href="javascript:;" class="password-recovery-btn notablet nomobile">Login</a>
+          </div>
+        </div>
+
+        <!-- Show this box when the email address doesn't exist -->
+        <!-- <div class="error-box clear">Email address not found.</div> -->
+
+        <!-- Show this box when the user submits the recovery form -->
+        <!-- <div class="succes-box clear">Instructions to reset your password have been sent to you. Please check your email.</div> -->
+      </div>
+    </form>
+  </div>
+  
+
+  <!-- Introduction Section -->
+  <div class="section content-section" id="subscribe-application">
+    <div class="container clear">
+      <form id="calculate-price-form" action="signin-register.html">
+    
+        <div class="row">
+            <div class="col twelve">
+              <ul class="breadcrumbs nomobile">
+                <li class="active">
+                  <span class="breadcrumb-number">1</span> 
+                  Choose publications
+                  <span class="breadcrumb-line">&nbsp;</span>
+                </li>
+                <li><span class="breadcrumb-number">2</span>
+                  Sign in or Register
+                  <span class="breadcrumb-line">&nbsp;</span>
+                </li>
+                <li><span class="breadcrumb-number">3</span>
+                 Payment details
+                 <span class="breadcrumb-line">&nbsp;</span>
+                </li>
+                <li><span class="breadcrumb-number">4</span>
+                Create Account</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="row">        
+
+          <!-- Combining publications -->
+          <div class="col eight tablet-nine mobile-full">
+            <h2>Step 1 of 3: Choose publications</h2>
+
+            <div class="subscribe-introduction">
+              <p>Tailor MedicinesComplete to your needs by choosing the publications that you want included.</p>
+              <p>Each individual annual subscription is for a single user and is valid for 365 days.</p>
+            </div>
+          </div>
+
+          <!-- Tailored packages -->
+          <div class="col four tablet-three nomobile">
+            <h3>Buy Multiple Publications and save up to 25%</h3>
+
+            <small>The more publications you add to MedicinesComplete the more you save. You'll save 5% for 2 publications up to 25% for 9 publications.</small>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col twelve" id="publication-container">
+            
+            <div class="greybox" id="country-select-container">
+              <div class="inline-field" id="country-selection">
+                <label class="left label-big">Select country</label>
+                <div class="select-blue-box">
+                  <select id="country-select-box" required>
+                    <option value="">Country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                  </select>
+                  <div class="out"></div>
+                </div>
+              </div>
+            </div>
+
+            <table id="publication-order-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="subscription-title"></th>
+                  <th class="subscription-date">Subscription Starts</th>
+                  <th>Individual Annual Subscription</th>
+                </tr>
+              </thead>
+
+              <tbody id="publication-listing">
+                <tr>
+                  <td><input type="checkbox" value="handbook-on-injectable-drugs" id="handbook-on-injectable-drugs" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="handbook-on-injectable-drugs">Handbook on Injectable Drugs</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">8 Nov 2014</td>
+                  <td>
+                    <span class="currency">$</span>
+                    <span class="price">410<span class="decimals">.00</span></span>
+                  </td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/7.handbook-on-injectable-drugs.png" alt="AHFS Drug Information Cover"/>
+                      <p><b>Handbook on Injectable Drugs (HID)</b>, by the ASHP and Lawrence Trissel, is the ultimate authority on compatibility and stability of injectable drugs. HID brings together comprehensive information on 359 parenteral drugs commercially available in the United States and in other countries, and offers pharmacists and health care professionals a precise, reliable way to make their organisations safer for patients.</p>
+
+                      <p>For almost 30 years this comprehensive, user-friendly resource has been widely recognised and trusted as the authority on injectable drug information. No other drug reference examines parenteral drug stability and compatibility in such extensive detail. </p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" value="herbal-medicines" id="herbal-medicines" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="herbal-medicines">Herbal Medicines</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">8 Nov 2013</td>
+                  <td><span class="currency">$</span><span class="price">195<span class="decimals">.00</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/18.stockleys-herbal-medicines-interactions.png" alt="AHFS Drug Information Cover"/>
+                      <p><b>Herbal Medicines</b> is written by experts in the fields of pharmacognosy, phytochemistry, phytopharmacy, clinical herbal medicines, phytopharmacovigilance and regulation of herbal medicinal products. It is an invaluable online resource for pharmacists and other healthcare professionals who require evidence-based information on herbal medicines.</p>
+                    </div>
+                  </td>
+                </tr>
+
+                 <tr>
+                  <td><input type="checkbox" value="injectable-drug-guide" id="injectable-drug-guide" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="injectable-drug-guide">Injectable Drug Guide</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">from date of purchase</td>
+                  <td><span class="currency">$</span><span class="price">162<span class="decimals">.00</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/9.injectable-drugs-guide.png" alt="AHFS Drug Information Cover"/>
+                      <p><b>Handbook on Injectable Drugs (HID)</b>, by the ASHP and Lawrence Trissel, is the ultimate authority on compatibility and stability of injectable drugs. HID brings together comprehensive information on 359 parenteral drugs commercially available in the United States and in other countries, and offers pharmacists and health care professionals a precise, reliable way to make their organisations safer for patients.</p>
+
+                      <p>For almost 30 years this comprehensive, user-friendly resource has been widely recognised and trusted as the authority on injectable drug information. No other drug reference examines parenteral drug stability and compatibility in such extensive detail. </p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" value="kucers-the-use-of-anitbiotics" id="kucers-the-use-of-anitbiotics" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="kucers-the-use-of-anitbiotics">Kucers' the Use of Antibiotics</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">13 Nov 2013</td>
+                  <td><span class="currency">$</span><span class="price">162<span class="decimals">.00</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/10.kucers-the-user-of-antibiotics.png" alt="AHFS Drug Information Cover"/>
+                     <p><b>Kucers’ the Use of Antibiotics</b> is the leading resource in this vast and rapidly developing field, bringing together information on antimicrobial agents in a manner that is unrivalled.</p>
+
+                     <p>Outlines the clinical use of all antimicrobials-antibiotics, antifungals, antiparasitic and antiviral agents. The addition of antiparasitic agents in this edition means that it now covers the whole of antimicrobial therapy.</p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" id="martindale-the-complete-drug-reference" value="martindale-the-complete-drug-reference" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="martindale-the-complete-drug-reference">Martindale: The Complete Drug Reference</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">6 Feb 2013</td>
+                  <td><span class="currency">$</span><span class="price">455<span class="decimals">.00</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/11.martindale.png" alt="AHFS Drug Information Cover"/>
+                      <p><b>Martindale</b> is a comprehensive and reliable reference resource on drugs and medicines used throughout the world. It is prepared by an experienced team of pharmacists who receive formal training in literature evaluation and search techniques. They use their professional expertise to provide a digest of the available literature, selecting the most clinically relevant and appropriate information from reliable published sources. </p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" value="remington-the-science-and-practice-of-pharmacy" id="remington-the-science-and-practice-of-pharmacy" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="remington-the-science-and-practice-of-pharmacy">Remington: The Science and Practice of Pharmacy</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">from date of purchase</td>
+                  <td><span class="currency">$</span><span class="price">150<span class="decimals">.00</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/14.remington.png" alt="AHFS Drug Information Cover"/>
+                      <p>For more than 100 years, <b>Remington: The Science and Practice of Pharmacy</b> has been the definitive reference for use in every year of pharmacy school and in practice afterwards. It covers the entire scope of pharmacy education from the history of pharmacy and ethics to the particulars of industrial pharmacy and pharmacy practice.</p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" value="rules-guidance-for-pharmaceutical-manufacturers-distributors" id="rules-guidance-for-pharmaceutical-manufacturers-distributors" name="publications[]"/></td>
+                  <td class="subscription-title">
+                    <label for="rules-guidance-for-pharmaceutical-manufacturers-distributors">Rules &amp; Guidance for Pharmaceutical Manufacturers &amp; Distributors</label>
+                    <a href="javascript:;" class="see-details-btn">See details</a>
+                  </td>
+                  <td class="subscription-date">9 Nov 2013</td>
+                  <td><span class="currency">$</span><span class="price">184<span class="decimals">.20</span></span></td>
+                </tr>
+
+                <tr class="details">
+                  <td colspan="4">
+                    <div>
+                      <img src="../assets/images/publications/thumbs/15.rules-guidance-for-manufactureres-distributors.png" alt="AHFS Drug Information Cover"/>
+                      <p>Since its first publication in 1971, <b>Rules and Guidance for Pharmaceutical Manufacturers and Distributors</b> (commonly known as “The Orange Guide”) has been an essential reference for all involved in the manufacture or distribution of medicines in Europe. The Orange Guide collates in one convenient and authoritative source European and UK guidance documents and information on legislation relating to the manufacture and distribution of medicines for human use.</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody id="price-calculation-section" class="closed">
+                <tr>
+                  <td></td>
+                  <td colspan="2">Total Recommended Retail Price (before tax)</td>
+                  <td id="total-recommended-retail-price">
+                    <span class="currency">$</span><span class="price">865<span class="decimals">.30</span></span>
+                  </td>
+                </tr>
+
+                <tr class="hide" id="multi-plublication-tr">
+                  <td></td>
+                  <td colspan="2">Less <span id="multi-publication-discount-percentage">23</span>% multi-publication discount</td>
+                  <td>-<span class="currency">$</span><span class="price">198<span class="decimals">.95</span></span></td>
+                </tr>
+
+                <tr class="hide promotion-table-row">
+                  <td></td>
+                  <td colspan="2" class="message"></td>
+                  <td>-<span class="currency">$</span><span class="price"></span></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td colspan="2">Tax</td>
+                  <td id="tax"><span class="currency">$</span><span class="price">0<span class="decimals">.00</span></span></td>
+                </tr>
+              </tbody>
+
+              <tbody id="price-total-section" class="closed">
+                <tr>
+                  <td></td>
+                  <td colspan="2">Price (incl. Tax)</td>
+                  <td id="total-taxed-price"><span class="currency">$</span><span class="price">666<span class="decimals">.05</span></span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div id="order-error-container">
+
+            </div>
+
+            <div class="greybox" id="promo-codes-box">
+              <a href="javascript:;" id="promotion-codes-toggle-btn" class="icon-arrow-right-blue">Promotion codes</a>
+
+              <div class="promo-code-section none">
+                <div class="form-fields">
+                  <label>Your Code</label>
+                  <input type="text" class="promocode-input" name="promocode[]"/>
+                  <input type="submit" class="cancel btn btn-medium icon-wink promocode-submit" name="apply-promo-code" value="Apply Code"/>
+                </div>
+  
+                <div class="succes-box none">
+                  Promotion code <span class="code"></span> applied successfully.
+                </div>
+
+                <div class="error-box none">
+                  Promotion code has already been used.
+                </div>
+              </div>
+
+              <div class="promo-code-section">
+                <div class="form-fields">
+                  <label>Your Code</label>
+                  <input type="text" class="promocode-input" name="promocode[]"/>
+                  <input type="submit" class="cancel btn btn-medium icon-wink promocode-submit" name="apply-promo-code" value="Apply Code"/>
+                </div>
+                <div class="succes-box none">
+                  Promotion code <span class="code"></span> applied successfully.
+                </div>
+
+                <div class="error-box none">
+                  Promotion code has already been used.
+                </div>
+              </div>
+
+              <a href="javascript:;" id="add-promo-code">+ Add Another Code</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col nine mobile-full">
+            <div class="field-inline license-agreement">
+              <input type="checkbox" name="license-agreement" value="value" id="license-agreement" required/><label for="license-agreement">I am purchasing a single-user subscription for these publications and agree to the <a href="#">MedicinesComplete Licence Agreement</a>.</label>
+            </div>
+          </div>
+
+          <div class="col three mobile-full">
+            <input type="submit" class="btn btn-large right icon-arrow-right-padded mobile-full" value="Buy Subscriptions" id="buy-subscriptions-btn" name="choose-publications"/>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Footer Links -->
+  <div id="footer-dark" class="section">
+    <div class="container clear">
+      <a href="javascript:;" id="to-top-button">Back to top</a>
+      <div class="row clear">
+
+        <div class="col four nomobile">
+          <ul class="menu-big">
+            <li><a class="active" href="index.html" title="Home Page">Home</a></li>
+            <li><a href="publications.html" title="Our Publications Page">Our Publications</a></li>
+            <li><a href="subscribe/index.html" title="Subscribe Page">Subscribe</a></li>
+            <li><a href="product-updates.html" title="Product Updates Page">Product Updates</a></li>
+            <li><a href="contact.html" title="Contact Us Page">Contact Us</a></li>
+            <li><a href="help.html" title="Help Page">Help</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col four mobile-full">
+          <h2>Search MedicinesComplete</h2>
+          <form id="footer-search">      
+            <input class="icon-search-grey no-mobile-border-box" id="footer-search-input" type="search" name="" value="" placeholder="Search" /> 
+          </form>
+        </div>
+
+        <div class="col four mobile-full" id="footer-contact">
+          <h2>Contact Us</h2>      
+          <p>Contact our Customer Service Team anytime <b>Monday</b> to <b>Friday</b> between 9am and 5pm (GMT).</p>
+          <ul>
+            <li>Telephone: +44 (0) 207 572 2266</li>
+            <li>Email: <a href="mailto:opsteam@rpharms.com" title="Email us">opsteam@rpharms.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row clear">
+        <div class="col four nomobile">
+          <hr/>
+          <ul>
+            <li><a href="" title="Read our Accessibility guidelines">Accessibility</a></li>
+            <li><a href="" title="Read our Cookie and Privacy Policies">Cookie and Privacy Policy</a></li>
+            <li><a href="" title="View our Site Map">Site map</a></li>
+            <li><a href="" title="Read our Terms and Conditions">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col four nomobile">
+          <hr/>
+
+          <p>Our other sites: <a href="http://www.pharmpress.com" target="_blank" title="Visit the Pharmaceutical Press website">Pharmaceutical Press</a> and <a href="http://www.rpharms.com/" target="_blank" title="Visit the Royal Pharmaceutical Society website">The Royal Pharmaceutical Society</a></p>
+        </div>
+
+
+        <div class="col four mobile-full">
+          <hr/>
+
+          <ul>
+            <li><a class="icon-left icon-twitter" target="_blank" href="https://twitter.com/PharmPress/" title="Open our Twitter page">Follow us on Twitter</a></li>
+            <li><a class="icon-left icon-facebook" target="_blank" href="https://www.facebook.com/PharmPress" title="Open our Facebook page">Find us on Facebook</a></li>
+            <li><a class="icon-left icon-mail" target="_blank" href="http://www.pharmpress.com/mc-alerts.asp?utm_source=medicinescomplete" title="Subscribe to our email newsletter">Subscribe to our email newsletter</a></li>
+          </ul>
+        </div>
+
+      </div>  
+    </div>
+  </div>
+
+
+  <!-- Footer Copy -->
+  <div class="section" id="footer-black">
+    <div class="container">
+      MedicinesComplete &copy; Pharmaceutical Press 2013. <span>All Rights Reserved.</span>
+    </div>
+  </div>
+  
+  
+  <!-- Load jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/javascripts/libs/modernizr.js"></script>
+
+  <!-- JQuery form validation -->
+  <script type="text/javascript" src="../assets/javascripts/libs/jquery.validate.min.js"></script>
+
+  <!-- Hammer (touch gestures) -->
+  <script type="text/javascript" src="../assets/javascripts/libs/hammer.js"></script>
+  <script type="text/javascript" src="../assets/javascripts/libs/jquery.hammer.js"></script>
+
+  <!-- Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/nvc7avz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- JS -->
+  <script src="../assets/javascripts/default.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your website's ID. -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+</body>
+</html>

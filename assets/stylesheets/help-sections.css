@@ -1,0 +1,315 @@
+/* ==========================================================================
+/* Specific Sections for the Help Page
+   ========================================================================== */
+
+/* File type icons (specific icons for the help page) */
+.icon-poster{
+  background: url('../images/icons/icon-poster.png') no-repeat left center;  
+}
+.icon-leaflet{
+  background: url('../images/icons/icon-leaflet.png') no-repeat left center;  
+}
+.icon-resource{
+  background: url('../images/icons/icon-resource.png') no-repeat left center;  
+}
+.icon-handout{
+  background: url('../images/icons/icon-handout.png') no-repeat left center;    
+}
+.icon-example-resource{
+  background: url('../images/icons/icon-example-resource.png') no-repeat left center;    
+}
+.icon-newsletter{
+  background: url('../images/icons/icon-newsletter.png') no-repeat left center;
+}
+.icon-download{
+  background: url('../images/icons/icon-download.png') no-repeat left center;
+  left: 0;
+}
+.icon-access{
+  background: url('../images/icons/icon-access.png') no-repeat left center;
+  left: 0;
+}
+
+
+/* Help page top section */
+#help-introduction p, .sidebar p{
+  font-size: 1.1em;
+}
+#help-introduction h3{
+  margin-bottom: 4px;
+  font-size: 1.3em;
+  line-height: 1.4rem;
+}
+#help-introduction .col:first-child{
+  font-size: 0.9em;
+}
+#help-introduction .col:first-child p{
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+#help-introduction .col:first-child  ul{
+  margin-bottom: 20px;
+}
+#help-introduction .col:first-child ul li{
+  margin: 0;
+}
+#help-introduction p:first-of-type{
+  margin-top: 0;
+  clear: both;
+}
+#help-introduction ul, #faq-section ul{
+  margin-left: 0;
+  list-style-type: none;
+  padding: 0;
+}
+#help-introduction ul li{
+  font-size: 1.1em;
+}
+#help-introduction ul li, #faq-section ul li{
+  margin: 0 0 10px 0;
+}
+#help-introduction ul li a, #faq-section ul li a{
+  padding-left: 30px;
+}
+#help-introduction .four:last-child ul li a{
+  padding-left: 0;
+}
+
+
+/* Subscribe email form */
+#help-introduction #subscribe-form{
+  margin-bottom: 15px;
+  position: relative;
+  display: block;
+}
+#help-introduction > p{
+  clear: both;
+  display: none;
+}
+#help-introduction #subscribe-form .inline-field{
+  width: 192px;
+  display: inline-block;
+}
+#help-introduction #subscribe-form .inline-field input{
+  padding: 12px 8px;
+  width: 100%;
+}
+#help-introduction #subscribe-form input[type=submit]{
+  width: auto;
+  display: block;
+}
+
+
+/* Subheader */
+#subscribe-header{
+  background: #f0f0f0 url('../images/help/help-subheader.png') no-repeat top left;
+  height: 276px;
+  border-top: 4px solid #ee7266;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#subscribe-header .btn-down{
+  float: right;
+  padding: 15px;
+  background: #ee7266 url('../images/icons/icon-arrow-down-big.png') center center no-repeat;
+  color: #fff;
+}
+
+
+/* FAQ Section */
+#faq-section h1 a{
+  font-size: 0.7em;
+}
+#faq dt{
+  font-size: 1.4em;
+  font-family: "museo-sans", "proxima-nova", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 8px;
+  cursor: pointer;
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#faq dt a{
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+}
+#faq dd p{
+  margin-top: 5px;
+  font-size: 1.15em;
+}
+
+
+/* Sidebar (next to the FAQ) */
+.sidebar p{
+  margin: 0;
+}
+.sidebar h2{
+  margin-bottom: 0px;
+}
+.sidebar ul{
+  margin: 10px 0 30px 0;
+}
+.sidebar h2:last-of-type{
+  margin-top: 40px;
+}
+#faq dt a{
+  display: inline-block;
+}
+
+
+/* Responsive CSS for Tablets only */
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+
+
+  /* Top section */
+  #help-introduction .one-third:first-child li a{
+    padding-left: 0;
+  }
+
+  #help-introduction #subscribe-form .inline-field,  #help-introduction #subscribe-form input[type=email] {
+    width: 224px;
+  }
+  #help-introduction #subscribe-form .inline-field{
+    margin-bottom: 5px;
+  }
+  #subscribe-form + p{
+    clear: both;
+    padding-top: 20px;
+  }
+
+  /* Sidebar font size */
+  .sidebar a{
+    font-size: 0.9em;
+  }
+
+
+}
+
+
+/* Responsive CSS for Mobile only */
+@media only screen and (max-width: 761px) {
+    
+    
+    #subscribe-header{
+      background: #f0f0f0 url('../images/help/help-subheader.png') no-repeat top right;
+      height: 276px;
+      border-top: 4px solid #ee7266;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+
+    /* Subscribe form */
+    #help-introduction #subscribe-form{
+      margin-top: 6px;
+    }
+    #help-introduction #subscribe-form input[type=email]{
+      width: 100%;
+      font-size: 1.3em;
+      margin: 0;
+    }
+    #help-introduction #subscribe-form input[type=submit]{
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+    #help-introduction #subscribe-form .inline-field{
+      width: 100%;
+    }
+    #help-introduction .col:first-child ul li a{ 
+      padding-left: 0;
+    }
+
+
+    /* Introduction styling reset */
+    #help-introduction h2{
+      margin-bottom: 0;
+    }
+    #help-introduction h3{
+      margin-top: 5px;
+    }
+    #help-introduction ul{
+      margin-top: 15px;
+    }
+    #help-introduction p{
+      margin-top: 0;
+    }
+
+
+    /* Add padding to create sections */
+    #help-introduction .one-third:first-child{
+      padding-top: 0;
+    }
+    #help-introduction .one-third{
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 14px;
+    }
+    #help-introduction .one-third:last-child{
+      padding-bottom: 0;
+      border: 0;
+    }
+
+
+    /* Improve styling of contact column */
+    #help-introduction .col:first-child{
+      font-size: 1em;
+    }
+    #help-introduction .col:first-child p{
+      margin-top: 5px;
+      margin-bottom: 8px;
+    }
+    #help-introduction .col:first-child  ul{
+      margin-bottom: 30px;
+    }
+    #help-introduction .col:first-child  ul:last-child{
+      margin-bottom: 10px;
+    }
+    #help-introduction .one-third:first-child li{
+      padding: 0 0 6px 0;
+    }
+
+    #help-introduction .one-third:first-child li a{
+      padding-left: 0;
+    }
+
+
+    /* Help carousel */
+    #help-carousel .container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #help-carousel #help-carousel-content{
+      padding-left: 0;
+      min-height: 300px;
+    }
+    #help-carousel h3{
+      font-size: 1.5em;
+    }
+    #help-carousel h4{
+      font-size: 1.1em;
+      margin-bottom: 0;
+    }
+
+    
+    /* Sidebar */
+    .sidebar{
+      margin-top: 20px;
+    }
+    .sidebar h2{
+      border-top: 1px solid #e6e6e6;
+      padding-top: 30px;
+      margin-top: 0;
+    }
+    .sidebar h2:last-of-type{
+      border:0;
+      padding-top: 0;
+    }
+
+}
+
