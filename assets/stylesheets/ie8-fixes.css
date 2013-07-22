@@ -2,15 +2,28 @@
 .container {
   min-width: 940px;
 }
+h1{
+	font-size: 1.9em;
+}
+#publication-listing tr td .currency{
+	text-align: right;
+}
 
 /* Subscribe section floating fix */
-#subscribe-section .olive{
+.subscribe-section .olive{
   height: 40px;
   display: inline-block;
 }
-#subscribe-section .olive a{
+.subscribe-section .olive a{
   color: #fff;
-  text-decoration: underline;;
+  text-decoration: underline;
+}
+.subscribe-section .olive a:hover{
+	text-decoration: none;
+}
+
+.subscription-price{
+	text-align: right;
 }
 
 
@@ -29,6 +42,14 @@ select.select-grey{
 	font-size: 1em;
 }
 
+#user-panel form select{
+	font-size: 14px;
+	background-image: none;
+	background-color: #fff;
+	padding:0;
+	width: 290px;
+	height: auto;
+}
 
 
 /* Background alignment fix */
@@ -43,3 +64,20 @@ select.select-grey{
 #subscribe-header{
 	background-position: center top;
 }
+
+#publications-filter label:first-child{
+	float: left;
+	margin-top: 10px;
+}
+#publications-filter select{
+	font-size: 14px;
+}
+
+
+/* Form fixes */
+#application-login-form input[type=email], #application-login-form input[type=password]{
+	width: 330px;
+}
+#password-header input[type=password]{
+ 	width: 260px;
+ }

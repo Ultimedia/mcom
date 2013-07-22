@@ -7,12 +7,21 @@
   display: none;
 }
 #product-updates-page .updates-list li a.see-details-btn{
-  display: none;
+  background: url('../images/icons/icon-arrow-up-green.png') no-repeat right center;
+  font-size: 1.1em;
+  margin-top: 3px;
 }
 #product-updates-page .updates-list li.closed a.see-details-btn{
+  background: url('../images/icons/icon-arrow-down-green.png') no-repeat right center;
+}
+#product-updates-page .see-details-btn{
   display: inline-block;
 }
 
+/* Hide details button when there is no JS */
+.no-js #product-updates-page .updates-list a.see-details-btn{
+  display: none;
+}
 
 /* Product updates list */
 #product-updates-page .updates-list{
@@ -34,9 +43,7 @@
 #product-updates-page .updates-list .see-details-btn, #product-updates-page .updates-list .hide-details-btn{
   padding-right: 16px;
 }
-#product-updates-page .updates-list .hide-details-btn{
-  margin-top: 15px;
-}
+
 #product-updates-page .updates-list .details{
   margin-top: 15px;
 }

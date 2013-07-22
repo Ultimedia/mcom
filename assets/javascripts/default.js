@@ -41,7 +41,7 @@
         equalTo: "Passwords do not match",
         require_from_group: "Please enter a valid address"
       });
-
+      
       // Wire resize handler
       resizeHandler();
 
@@ -162,7 +162,7 @@
       });
 
       // Show the selected tab
-      $('#audience-nav .tabs li').click(function(event) {
+      $('#audience-nav .tabs li').not('.tab-info').click(function(event) {
         // Disable default behaviour
         event.preventDefault();
 
@@ -312,8 +312,25 @@
 
         var checkBoxes = $('#publication-list input[type="checkbox"]');
         checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+      });
 
-      })
+      // 3. Allow only numbers in the participants field
+      $("#potential-users").keydown(function(event) {
+        // Allow: backspace, delete, tab, escape, and enter
+        if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
+             // Allow: Ctrl+A
+            (event.keyCode == 65 && event.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (event.keyCode >= 35 && event.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }else {
+            // Ensure that it is a number and stop the keypress
+            if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                event.preventDefault(); 
+            }   
+        }
+      });
 
     };
 
@@ -778,14 +795,22 @@
       // 3. JS functionality to open a specific detail item from a url parameter (for when a user clicks on one of the "see details" links in the page footer)
 
 
-
       // 4. Show / hide details functionality
       // Add a cursor pointer to the h5 element
       $('.updates-list li').has('a').find('h5').css('cursor', 'pointer');
 
-      // Show hide the details (using a simple toggleClass)
+      // Show hide the details (using toggleClass .closed)
       $('.updates-list li a, .updates-list li h5').click(function(){
-        $(this).closest('li').toggleClass('closed');
+        
+        var detailPanel = $(this).parent().closest('li');
+
+            detailPanel.toggleClass('closed');
+            if(detailPanel.hasClass('closed')){
+                detailPanel.find('.see-details-btn').text('See details');
+            }else{
+                detailPanel.find('.see-details-btn').text('Hide details');
+            }
+            
       });
 
       // 4. Publication filter menu

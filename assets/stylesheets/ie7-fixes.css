@@ -22,8 +22,12 @@
 }
 
 
+
 #publication-order-table input[type=checkbox]{
 	margin-top: 0 !important;
+}
+.subscription-price{
+	text-align: right;
 }
 .license-agreement input[type=checkbox], .promotions input[type=checkbox]{
 	margin-top: 4px !important;

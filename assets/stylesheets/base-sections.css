@@ -161,9 +161,6 @@
   margin: 0;
   border-right: 1px solid #736f6f;
 }
-#nav-header .navigation ul li:last-child {
-  border-right: 0;
-}
 #nav-header .navigation ul li a{
   color: #fff;
   text-decoration: none;
@@ -279,6 +276,9 @@
   margin: 0 !important;
   border-top: 0;
   border-bottom: 0;
+}
+#signin-btn.signin-active i.icon-arrow-down, #toggle-userpanel.user-panel-active i.icon-arrow-down{
+  background: url('../images/icons/icon-arrow-up.png') no-repeat center right;
 }
 .signin-active .icon-arrow-down, .user-panel-active .icon-arrow-down{
   top: 27px;
@@ -757,6 +757,9 @@
 
 
 /* Set styling for pages with a h2-h1 style header */
+#default-page #nav-header h1{
+  margin: 6px 0 10px 0;
+}
 #default-page h2, #subscribe-introduction h2, #contact-page .row:first-child h2, #institutional-enquiries-page .row:first-child h2, #help-page #help-introduction h2{
   margin-bottom: 30px; 
 }
@@ -1019,6 +1022,11 @@
     top: 8px;
     line-height: 20px;
   }
+
+    #default-page h2:first-child{
+    margin-top: 0;
+  }
+
 
 
 }
@@ -1341,6 +1349,9 @@
   }
   #default-page h2{
     margin-bottom: 10px;
+  }
+  #default-page h2:first-child{
+    margin-top: 0;
   }
 
 
