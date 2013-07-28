@@ -48,6 +48,9 @@
   float: right;
   margin-top: 40px;
 }
+#license-container .nine, #license-container .three{
+  margin-top: 30px;
+}
 
 
 /* Application (sections specific for the ordering flow) */

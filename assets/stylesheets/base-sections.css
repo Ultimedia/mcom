@@ -277,7 +277,7 @@
   border-top: 0;
   border-bottom: 0;
 }
-#signin-btn.signin-active i.icon-arrow-down, #toggle-userpanel.user-panel-active i.icon-arrow-down{
+#signin-btn.signin-active i.icon-arrow-down, #toggle-userpanel.user-panel-active i.icon-arrow-down, #toggle-account-menu .user-panel-active i.icon-arrow-down{
   background: url('../images/icons/icon-arrow-up.png') no-repeat center right;
 }
 .signin-active .icon-arrow-down, .user-panel-active .icon-arrow-down{
@@ -389,7 +389,20 @@
 }
 
 
-/* User Dashboard */
+/* Show the user Dashboard once a user is signed in */
+#signed-in-panel, #toggle-userpanel, #toggle-account-menu{
+  display: none;
+}
+.signed-in #signed-in-panel, .signed-in #toggle-userpanel{
+  display: block;
+}
+.signed-in #signin-btn, .signed-in #signin-panel, .signed-in #login-options-panel, .signed-in #nav-header .navigation #mobile-signin.open, .signed-in #password-recovery-panel{
+  display: none;
+}
+
+
+
+
 #user-panel{
   padding: 30px 0;
 }
@@ -964,6 +977,18 @@
   }
 
 
+  /* Signed in */
+  .signed-in #toggle-account-menu{
+    display: block;
+  }
+  .signed-in #toggle-userpanel{
+    display: none;
+  }
+
+  #signin-panel{
+    display: none;
+  }
+
 }
 
 
@@ -1026,8 +1051,6 @@
     #default-page h2:first-child{
     margin-top: 0;
   }
-
-
 
 }
 

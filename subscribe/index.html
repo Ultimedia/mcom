@@ -30,14 +30,14 @@
   <!-- Brand Header (logo / search) -->
   <div class="section" id="brand-header">
     <div class="container clear">
-      <a href="../index.html" class="left block logo">
+      <a href="../index.html" class="left block logo" title="Go to the homepage">
         <img src="../assets/images/logo.png" alt="`MedicinesComplete Logo"/>
       </a>
-      
+
       <!-- Search box -->
       <form class="right nomobile" id="header-search">
-        <input type="search" id="header-search-input" placeholder="Search for a generic, brand name or interaction"/>
-        <input type="submit" id="header-search-button" name="search" class="btn-search" value="Go"/>
+        <input type="search" id="header-search-input" placeholder="Search for a generic, brand name or interaction" title="Search our website"/>
+        <input type="submit" id="header-search-button" name="search" class="btn-search" value="Go" title="Submit your search"/>
       </form>
 
       <!-- Autocomplete styles -->
@@ -86,10 +86,18 @@
   <!-- Main Page Navigation -->
   <div class="section" id="nav-header">
     <div class="container clear">
-      <a href="javascript:;" class="nav-toggle nodesktop notablet nomobile icon-list-mobile" title="Open Mobile/Tablet Navigation"></a>
-      <a href="javascript:;" class="nav-search nodesktop notablet nomobile icon-search-mobile" title="Open Mobile Search"></a>
+      <a href="javascript:;" class="nav-toggle nodesktop notablet nomobile icon-list-mobile" title="Open the Mobile/Tablet Menu"></a>
+      <a href="javascript:;" class="nav-search nodesktop notablet nomobile icon-search-mobile" title="Open the Mobile Search Panel"></a>
 
       <h1 class="nodesktop showtablet showmobile">Subscribe</h1>
+
+      <!-- Search box mobile only -->
+      <form class="nodesktop notablet showmobile" id="mobile-search">
+        <div id="mobile-search-container">
+          <input type="search" id="mobile-search-input" placeholder="Search" name="search"/>
+          <input type="submit" id="mobile-search-button" class="btn-search" value="Go" name="search-submit"/>
+        </div>
+      </form>
 
       <!-- Main menu -->
       <div class="navigation">      
@@ -101,11 +109,12 @@
           <li><a href="../contact.html" title="Contact Us Page">Contact Us</a></li>
           <li><a href="../help.html" title="Help Page">Help</a></li>
 
+
           <!-- Alternative Mobile / tablet sign in form -->
           <li class="nodesktop showtablet showmobile open" id="mobile-signin">
             <h3>Sign in</h3>
 
-            <form action="../index-signedin.html" id="login-form-mobile">
+            <form action="index-signedin.html" id="login-form-mobile">
               <div class="field-inline">
                 <label for="mobile-username" class="nomobile">Email</label>
                 <input type="email" placeholder="Email" id="mobile-username" name="username" required/>
@@ -133,7 +142,7 @@
             <h3>Enter an Access Code</h3>
             <p>Enter an access code to add a subscription purchased elsewhere.</p>
 
-            <form id="authentication-code-form-mobile" action="choose-publications.html">
+            <form id="authentication-code-form-mobile" action="subscribe/choose-publications.html">
               <div class="field-inline last-field">
                 <input type="text" placeholder="Access Code" name="access-code" required/>
               </div>
@@ -146,15 +155,9 @@
         </ul>
       </div>
 
-      <a id="signin-btn" class="right btn-bright btn-medium icon-right notablet nomobile" href="javascript:;" title="Sign in Button">Sign in <i class="icon-arrow-down"></i></a> 
+      <a id="signin-btn" class="right btn-bright btn-medium icon-right notablet nomobile" href="javascript:;" title="Open the Sign in panel">Sign in <i class="icon-arrow-down"></i></a> 
 
-      <!-- Search box mobile only -->
-      <form class="nodesktop notablet showmobile" id="mobile-search">
-        <div id="mobile-search-container">
-          <input type="search" id="mobile-search-input" placeholder="Search"/>
-          <input type="submit" id="mobile-search-button" name="search" class="btn-search" value="Go"/>
-        </div>
-      </form>
+      <a id="toggle-userpanel" class="right btn-bright btn-medium icon-right notablet nomobile user-panel-active" href="javascript:;">My Account <i class="icon-arrow-down"></i></a>
     </div>
   </div>
 
@@ -205,7 +208,7 @@
         </div>
 
         <div class="col seven tablet-eight mobile-full">
-          <form id="authentication-code-form" action="choose-publications.html">
+          <form id="authentication-code-form" action="sample.html">
             <div class="field-inline">
               <input type="text" placeholder="Access Code" id="access-code" name="access-code" required/>
             </div>
@@ -273,6 +276,84 @@
         <!-- <div class="succes-box clear">Instructions to reset your password have been sent to you. Please check your email.</div> -->
       </div>
     </form>
+  </div>
+
+
+  <!-- User Dashboard mobile and tablet toggle -->
+  <div class="section nodesktop showtablet showmobile" id="toggle-account-menu">
+    <div class="container clear">
+      <a href="javascript:;" class="right btn-bright btn-medium icon-right user-panel-active">My account  <i class="icon-arrow-down"></i></a>
+    </div>
+  </div>
+  <!-- User Dashboard -->
+  <div id="signed-in-panel">
+    <div class="section global-menu" id="user-panel">
+      <div class="container">
+        <div class="row">
+          <div class="col four mobile-full">
+            <h2>Welcome back</h2>
+            <img src="../assets/images/system/nhs.png" alt=""/>
+            <p>MedicinesComplete for <b>Guys and St Thomas' NHS Foundation Trust</b>.</p>
+            <p>You have been signed-in automatically <span class="ip-address">from IP Address 9.121.345.67</span>.</p>
+
+            <!-- Manage my account button -->
+            <a href="#">Manage My Account</a>
+          </div>
+
+          <div class="col five mobile-full">
+            <h2>Browse Publications</h2>
+            <p>You have access to the: <a href="">BNF</a>, <a href="">BNF for Children</a>, <a href="">Drug Administration via Enteral Feeding Tubes</a>, <a href="">Martindale</a>, <a href="">Stockley's Drug Interactions</a>, <a href="">Stockley's Herbal Medicines Interactions</a>, <a href="">Stockley's Interaction Alerts.</a></p>
+
+            <form id="publication-browse" action="../publications.html">
+              <div class="field">
+              <select id="publication-select" required>
+                <option value="" disabled selected>Select a publication to browse</option>
+                <option>AHFS Drug Information</option>
+                <option>BNF</option>
+                <option>BNF for Children</option>
+                <option>Clarke’s Analysis of Drugs and Posions </option>
+                <option>Dietary Supplements</option>
+                <option>Drug Administration via Feeding Tubes</option>
+                <option>Handbook on Injectable Drugs</option>
+                <option>Herbal Medicines</option>
+                <option>Injectable Drugs Guide</option>     
+                <option>Kucers’ the Use of Anti-biotics</option>     
+                <option>Martindale</option>
+                <option>Paediatric Injectable Drugs</option>
+                <option>Pharmaceutical Excipients</option>
+                <option>Remington</option>
+                <option>Rules &amp; Guidance for Manufacturers &amp; Distributors</option>
+                <option>Stability Inidcating HPLC Methods for Drug Analysis</option>
+                <option>Stockley's Drug Interactions</option>
+                <option>Stockley's Herbal Medicines Interactions</option>
+                <option>Stockley's Interaction Alerts</option>
+                <option>The Merck Index</option>
+              </select>
+              </div>
+              <input type="submit" class="btn btn-medium btn-bright right" value="Browse"/>
+            </form>
+          </div>
+
+          <div class="col three nomobile">
+            <h2>Need help?</h2>
+            <p>Contact our Customer Service Team anytime <b>Monday</b> to <b>Friday</b> between 9am and 5pm (GMT).</p>
+            <ul>
+              <li><span>Telephone:</span> +44 (0) 207 572 2266</li>
+              <li><span>Email:</span> <a href="mailto:opsteam@rpharms.com">opsteam@rpharms.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section global-menu" id="logout-panel">
+      <div class="container">
+      <div class="row">
+        <div class="col twelve">
+          <a href="index.html" class="btn btn-medium btn-bright right">Sign out</a>
+        </div>
+      </div>
+      </div>
+    </div>
   </div>
   
 
@@ -452,6 +533,9 @@
           <hr/>
 
           <p>Our other sites: <a href="http://www.pharmpress.com" target="_blank">Pharmaceutical Press</a> and <a href="http://www.rpharms.com/" target="_blank">The Royal Pharmaceutical Society</a></p>
+
+          <p>Your IP address is <span id="ip-address">192.17.145.155</span></p>
+
         </div>
 
 

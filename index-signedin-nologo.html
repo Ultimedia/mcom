@@ -20,12 +20,11 @@
   <!-- We put Modernizer in the page head to detect JS (and this avoids flickering DOM elements) -->
   <script type="text/javascript" src="assets/javascripts/libs/modernizr.js"></script>
 
-  <!-- Typekit -->
+  <!-- Typekit in page head to avoid flickering fonts -->
   <script type="text/javascript" src="//use.typekit.net/nvc7avz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body id="hone-page">
-    
+<body id="home-page" class="signed-in">
 
   <!-- Brand Header (logo / search) -->
   <div class="section" id="brand-header">
@@ -91,6 +90,14 @@
 
       <h1 class="nodesktop showtablet showmobile">Home</h1>
 
+      <!-- Search box mobile only -->
+      <form class="nodesktop notablet showmobile" id="mobile-search">
+        <div id="mobile-search-container">
+          <input type="search" id="mobile-search-input" placeholder="Search" name="search"/>
+          <input type="submit" id="mobile-search-button" class="btn-search" value="Go" name="search-submit"/>
+        </div>
+      </form>
+
       <!-- Main menu -->
       <div class="navigation">      
         <ul class="menu">
@@ -100,19 +107,173 @@
           <li><a href="product-updates.html" title="Open the Product Updates Page">Product Updates</a></li>
           <li><a href="contact.html" title="Open the Contact Us Page">Contact Us</a></li>
           <li><a href="help.html" title="Open the Help Page">Help</a></li>
+
+          <!-- Alternative Mobile / tablet sign in form -->
+          <li class="nodesktop showtablet showmobile open" id="mobile-signin">
+            <h3>Sign in</h3>
+
+            <form action="index-signedin.html" id="login-form-mobile">
+              <div class="field-inline">
+                <label for="mobile-username" class="nomobile">Email</label>
+                <input type="email" placeholder="Email" id="mobile-username" name="username" required/>
+              </div>
+
+              <div class="field-inline last-field">
+                <label for="mobile-password" class="nomobile">Password</label>
+                <input type="password" placeholder="Password" id="mobile-password" name="password" required/>
+              </div>
+
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Sign in" id="mobile-btn-login" name="login">
+
+              <div class="login-options">
+                <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+
+                <label><input type="checkbox" class="remember"/>Remember Me</label>
+              </div>
+              <!-- Show this message when the login fails (invalid password, no account found etc) -->
+              <!-- <div class="error-box clear">User name/password combination not found.</div> -->
+            </form>
+          </li>
+
+          <!-- Alternative Mobile / Tablet access code form -->
+          <li class="nodesktop showtablet showmobile" id="mobile-access-code">
+            <h3>Enter an Access Code</h3>
+            <p>Enter an access code to add a subscription purchased elsewhere.</p>
+
+            <form id="authentication-code-form-mobile" action="subscribe/choose-publications.html">
+              <div class="field-inline last-field">
+                <input type="text" placeholder="Access Code" name="access-code" required/>
+              </div>
+              <input class="btn-submit btn-medium icon-right" type="submit" value="Redeem your code" name="access-code-submit">
+              <!-- Show this box when there is an access code error -->
+              <!-- <div class="error-box clear">Access code not found.</div> -->
+            </form>
+
+          </li>
         </ul>
       </div>
 
-      <a id="toggle-userpanel" class="right btn-bright btn-medium icon-right notablet nomobile user-panel-active" href="javascript:;">My Account <i class="icon-arrow-down"></i></a>
+      <a id="signin-btn" class="right btn-bright btn-medium icon-right notablet nomobile" href="javascript:;" title="Open the Sign in panel">Sign in <i class="icon-arrow-down"></i></a> 
 
-      <!-- Search box mobile only -->
-      <form class="nodesktop notablet showmobile" id="mobile-search">
-        <div id="mobile-search-container">
-          <input type="search" id="mobile-search-input" placeholder="Search" name="search"/>
-          <input type="submit" id="mobile-search-button" class="btn-search" value="Go" name="search-submit"/>
-        </div>
-      </form>
+      <a id="toggle-userpanel" class="right btn-bright btn-medium icon-right notablet nomobile user-panel-active" href="javascript:;">My Account <i class="icon-arrow-down"></i></a>
     </div>
+  </div>
+
+
+  <!-- Sign in panel -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="global-menu notablet nomobile" id="signin-panel">
+    <!-- Login form -->
+    <div class="container section open" id="login-section">
+      <div class="row">
+        <div class="col twelve">
+          <form action="index-signedin.html" id="login-form">
+
+           <h3>Sign in</h3>
+
+            <div class="field-inline">
+              <label for="username">Email</label>
+              <input type="email" placeholder="Email" id="username" name="username" required/>
+            </div>
+            
+            <div class="field-inline">
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" name="password" required/>
+            </div>
+
+            <input class="btn-submit btn-medium icon-right right" type="submit" value="Sign in" id="btn-login" name="login">
+
+
+            <div class="login-options right">
+              <a href="javascript:;" class="password-recovery-btn">Forgotten Your Password?</a>
+              <label><input type="checkbox" class="remember"/>Remember Me</label>
+            </div>
+
+            <!-- Show this box when the user enters invalid login credentials -->
+            <!-- <div class="error-box clear">User Name/password combination not found.</div> -->
+          </form>         
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Access code panel -->
+    <div class="container section" id="authentication-code-section">
+     <div class="row">
+        <div class="col five tablet-four mobile-full">
+          <h3>Enter an Access Code</h3>
+          <p>Enter an access code to add a subscription purchased elsewhere.</p>
+        </div>
+
+        <div class="col seven tablet-eight mobile-full">
+          <form id="authentication-code-form" action="sample.html">
+            <div class="field-inline">
+              <input type="text" placeholder="Access Code" id="access-code" name="access-code" required/>
+            </div>
+            <input class="btn-submit btn-medium right" type="submit" value="Redeem your code" id="btn-redeem" name="access-code-submit">
+            <!-- Show this box when there is an access code error -->
+            <!-- <div class="error-box clear">Email address not found.</div> -->
+          </form>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+
+  <!-- Login options panel -->
+  <div class="section global-menu" id="login-options-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col one-third mobile-full">
+          <a href="javascript:;" id="access-code-toggle">Enter an access code</a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <!-- Athens link for demo purposes -->
+          <a href="https://www.medicinescomplete.com/mc/athens.htm?uri=http://www.medicinescomplete.com/"><img src="assets/images/system/athens.png" class="nomobile" alt="Athens"/> <span>Sign in via OpenAthens</span></a>
+        </div>
+
+        <div class="col one-third mobile-full">
+          <!-- Federation link for demo purposes -->
+          <a href="http://www.medicinescomplete.com/mc/ukfederation.htm"><img src="assets/images/system/ukfederation.png" class="nomobile" alt="UK Federation"/>
+            <span>Sign in via your home organisation</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Password recovery form -->
+  <!-- Manually open this panel by adding the "open" class -->
+  <div class="section global-menu notablet nomobile" id="password-recovery-panel">
+    <form id="password-recovery-form">
+      <div class="container clear">
+        <div class="row">
+          <div class="col five tablet-four mobile-full">
+            <h3>Forgot Password</h3>
+
+            <p>Enter the email address you used for your subscription and we’ll send you instructions to reset your password.</p>
+          </div>
+
+          <div class="col seven tablet-eight mobile-full">
+
+            <div class="field-inline">
+              <input type="email" placeholder="Email Address" id="email" name="email" required/>
+            </div>
+
+            <input class="btn-submit btn-medium right" type="submit" value="Send Reset Instructions" id="btn-recover" name="recovery">
+
+            <a href="javascript:;" class="password-recovery-btn notablet nomobile">Login</a>
+          </div>
+        </div>
+
+        <!-- Show this box when the email address doesn't exist -->
+        <!-- <div class="error-box clear">Email address not found.</div> -->
+
+        <!-- Show this box when the user submits the recovery form -->
+        <!-- <div class="succes-box clear">Instructions to reset your password have been sent to you. Please check your email.</div> -->
+      </div>
+    </form>
   </div>
 
 
@@ -123,74 +284,76 @@
     </div>
   </div>
   <!-- User Dashboard -->
-  <div class="section global-menu" id="user-panel">
-    <div class="container">
+  <div id="signed-in-panel">
+    <div class="section global-menu" id="user-panel">
+      <div class="container">
+        <div class="row">
+          <div class="col four mobile-full">
+            <h2>Welcome back</h2>
+            <p>MedicinesComplete for <b>Guys and St Thomas' NHS Foundation Trust</b>.</p>
+            <p>You have been signed-in automatically <span class="ip-address">from IP Address 9.121.345.67</span>.</p>
+
+            <!-- Manage my account button -->
+            <a href="#">Manage My Account</a>
+          </div>
+
+          <div class="col five mobile-full">
+            <h2>Browse Publications</h2>
+            <p>You have access to the: <a href="">BNF</a>, <a href="">BNF for Children</a>, <a href="">Drug Administration via Enteral Feeding Tubes</a>, <a href="">Martindale</a>, <a href="">Stockley's Drug Interactions</a>, <a href="">Stockley's Herbal Medicines Interactions</a>, <a href="">Stockley's Interaction Alerts.</a></p>
+
+            <form id="publication-browse" action="publications.html">
+              <div class="field">
+              <select id="publication-select" required>
+                <option value="" disabled selected>Select a publication to browse</option>
+                <option>AHFS Drug Information</option>
+                <option>BNF</option>
+                <option>BNF for Children</option>
+                <option>Clarke’s Analysis of Drugs and Posions </option>
+                <option>Dietary Supplements</option>
+                <option>Drug Administration via Feeding Tubes</option>
+                <option>Handbook on Injectable Drugs</option>
+                <option>Herbal Medicines</option>
+                <option>Injectable Drugs Guide</option>     
+                <option>Kucers’ the Use of Anti-biotics</option>     
+                <option>Martindale</option>
+                <option>Paediatric Injectable Drugs</option>
+                <option>Pharmaceutical Excipients</option>
+                <option>Remington</option>
+                <option>Rules &amp; Guidance for Manufacturers &amp; Distributors</option>
+                <option>Stability Inidcating HPLC Methods for Drug Analysis</option>
+                <option>Stockley's Drug Interactions</option>
+                <option>Stockley's Herbal Medicines Interactions</option>
+                <option>Stockley's Interaction Alerts</option>
+                <option>The Merck Index</option>
+              </select>
+              </div>
+              <input type="submit" class="btn btn-medium btn-bright right" value="Browse"/>
+            </form>
+          </div>
+
+          <div class="col three nomobile">
+            <h2>Need help?</h2>
+            <p>Contact our Customer Service Team anytime <b>Monday</b> to <b>Friday</b> between 9am and 5pm (GMT).</p>
+            <ul>
+              <li><span>Telephone:</span> +44 (0) 207 572 2266</li>
+              <li><span>Email:</span> <a href="mailto:opsteam@rpharms.com">opsteam@rpharms.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section global-menu" id="logout-panel">
+      <div class="container">
       <div class="row">
-        <div class="col four mobile-full">
-          <h2>Welcome back</h2>
-          <p>MedicinesComplete for <b>Guys and St Thomas' NHS Foundation Trust</b>.</p>
-          <p>You have been signed-in automatically <span class="ip-address">from IP Address 9.121.345.67</span>.</p>
-
-          <!-- Manage my account button -->
-          <a href="#">Manage My Account</a>
+        <div class="col twelve">
+          <a href="index.html" class="btn btn-medium btn-bright right">Sign out</a>
         </div>
-
-        <div class="col five mobile-full">
-          <h2>Browse Publications</h2>
-          <p>You have access to the: <a href="">BNF</a>, <a href="">BNF for Children</a>, <a href="">Drug Administration via Enteral Feeding Tubes</a>, <a href="">Martindale</a>, <a href="">Stockley's Drug Interactions</a>, <a href="">Stockley's Herbal Medicines Interactions</a>, <a href="">Stockley's Interaction Alerts.</a></p>
-
-          <form id="publication-browse" action="publications.html">
-            <div class="field">
-            <select id="publication-select" required>
-              <option value="" disabled selected>Select a publication to browse</option>
-              <option>AHFS Drug Information</option>
-              <option>BNF</option>
-              <option>BNF for Children</option>
-              <option>Clarke’s Analysis of Drugs and Posions </option>
-              <option>Dietary Supplements</option>
-              <option>Drug Administration via Feeding Tubes</option>
-              <option>Handbook on Injectable Drugs</option>
-              <option>Herbal Medicines</option>
-              <option>Injectable Drugs Guide</option>     
-              <option>Kucers’ the Use of Anti-biotics</option>     
-              <option>Martindale</option>
-              <option>Paediatric Injectable Drugs</option>
-              <option>Pharmaceutical Excipients</option>
-              <option>Remington</option>
-              <option>Rules &amp; Guidance for Manufacturers &amp; Distributors</option>
-              <option>Stability Inidcating HPLC Methods for Drug Analysis</option>
-              <option>Stockley's Drug Interactions</option>
-              <option>Stockley's Herbal Medicines Interactions</option>
-              <option>Stockley's Interaction Alerts</option>
-              <option>The Merck Index</option>
-            </select>
-            </div>
-            <input type="submit" class="btn btn-medium btn-bright right" value="Browse"/>
-          </form>
-        </div>
-
-        <div class="col three nomobile">
-          <h2>Need help?</h2>
-          <p>Contact our Customer Service Team anytime <b>Monday</b> to <b>Friday</b> between 9am and 5pm (GMT).</p>
-          <ul>
-            <li><span>Telephone:</span> +44 (0) 207 572 2266</li>
-            <li><span>Email:</span> <a href="mailto:opsteam@rpharms.com">opsteam@rpharms.com</a></li>
-          </ul>
-        </div>
+      </div>
       </div>
     </div>
   </div>
-  <div class="section global-menu" id="logout-panel">
-    <div class="container">
-    <div class="row">
-      <div class="col twelve">
-        <a href="index.html" class="btn btn-medium btn-bright right">Sign out</a>
-      </div>
-    </div>
-    </div>
-  </div>
-  
-  
+
+
   <!-- Hero carousel -->
   <div id="carousel" class="section">
     <span class="border-transparent"></span>
@@ -304,23 +467,18 @@
 
   <!-- Tabbed content (benefits section) -->
   <div id="audience-content">
-    <div class="container content-section section clear">
-
-      <div class="row clear">
-        <div class="col four spacer notablet nomobile">&nbsp;</div>
-
-        <div class="col eight tablet-full mobile-full no-mobile-topmargin">
-          <h1>Why Use MedicinesComplete?</h1>
-        </div>
-      </div>
-    </div>
-
     <div id="audience-tab-content">
 
-
       <!-- Community pharmies benefits content -->
-      <div class="tab-content community-pharmacies-content">
-        <div class="section container content-section">
+      <div class="tab-content community-pharmacies-content" id="community-pharmacies-content">
+        <div class="section container content-section clear">
+          <div class="row clear">
+            <div class="col four spacer notablet nomobile">&nbsp;</div>
+            <div class="col eight tablet-full mobile-full no-mobile-topmargin">
+              <h1>Why Use MedicinesComplete?</h1>
+            </div>
+          </div>
+
           <div class="row clear">
 
             <!-- Trial section -->
@@ -392,8 +550,16 @@
 
 
       <!-- Hospitals and community care benefits content -->
-      <div class="tab-content active hospitals-and-community-care-content">
+      <div class="tab-content active hospitals-and-community-care-content" id="hospitals-and-community-care-content">
+
         <div class="section container content-section">
+          <div class="row clear">
+            <div class="col four spacer notablet nomobile">&nbsp;</div>
+            <div class="col eight tablet-full mobile-full no-mobile-topmargin">
+              <h1>Why Use MedicinesComplete?</h1>
+            </div>
+          </div>
+
           <div class="row clear">
 
             <!-- Trial section -->
@@ -477,8 +643,14 @@
 
 
       <!-- Phamaceutical industry content -->
-      <div class="tab-content pharmaceutical-industry-content">
+      <div class="tab-content pharmaceutical-industry-content" id="pharmaceutical-industry-content">
         <div class="section container content-section">
+          <div class="row clear">
+            <div class="col four spacer notablet nomobile">&nbsp;</div>
+            <div class="col eight tablet-full mobile-full no-mobile-topmargin">
+              <h1>Why Use MedicinesComplete?</h1>
+            </div>
+          </div>
           <div class="row clear">
 
             <!-- Trial section -->
@@ -562,8 +734,15 @@
 
 
       <!-- Academics and students benefits content -->
-      <div class="tab-content academics-and-students-content">
+      <div class="tab-content academics-and-students-content" id="academics-and-students-content">
         <div class="section container content-section">
+          <div class="row clear">
+            <div class="col four spacer notablet nomobile">&nbsp;</div>
+            <div class="col eight tablet-full mobile-full no-mobile-topmargin">
+              <h1>Why Use MedicinesComplete?</h1>
+            </div>
+          </div>
+          
           <div class="row clear">
 
             <!-- Trial section -->
@@ -759,6 +938,8 @@
           <hr/>
 
           <p>Our other sites: <a href="http://www.pharmpress.com" target="_blank" title="Visit the Pharmaceutical Press website">Pharmaceutical Press</a> and <a href="http://www.rpharms.com/" target="_blank" title="Visit the Royal Pharmaceutical Society website">The Royal Pharmaceutical Society</a></p>
+
+          <p>Your IP address is <span id="ip-address">192.17.145.155</span></p>
         </div>
 
 
@@ -787,7 +968,7 @@
 
   <!-- Load jQuery and main libraries-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascripts/libs//underscore-min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/libs/underscore-min.js"></script>
 
   <!-- Hammer (touch gestures) -->
   <script type="text/javascript" src="assets/javascripts/libs/hammer.js"></script>

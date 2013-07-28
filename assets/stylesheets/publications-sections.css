@@ -49,6 +49,7 @@
   margin: 0;
   padding: 0;
   border: 1px solid #dbdbdb;
+  margin-top: 17px;
   margin-bottom: 42px;
   overflow: auto;
   background: #f0f0f0;
@@ -146,12 +147,15 @@
   margin: 0 5px 0 0px;
   font-size: 1.1em;
 }
+#publications-filter label:first-child{
+  display: block;
+}
 #publications-filter select{
   width: auto;
   overflow: hidden;
  }
 #publications-filter .select-blue-box, #publications-filter .select-blue-box select{
-  width: 206px;
+  width: 280px;
   cursor: pointer;
   display: inline-block;
 }
@@ -167,8 +171,13 @@
 /* Responsive CSS for Tablets only */
 @media only screen and (min-width: 762px) and (max-width: 939px) {
 
+  #publications-filter .select-blue-box .out{
+    padding-left: 5px;
+  }
+  #publications-filter .select-blue-box{
+    background-image: url('../images/icons/icon-arrow-select-tablet.png');
+  }
 
-  /* Publicatin filter */
   #publications-filter select{
     width: auto;
     margin-left: 0px;

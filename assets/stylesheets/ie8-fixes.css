@@ -9,6 +9,7 @@ h1{
 	text-align: right;
 }
 
+
 /* Subscribe section floating fix */
 .subscribe-section .olive{
   height: 40px;
@@ -30,12 +31,12 @@ h1{
 /* Subscrine page fixes */
 /* Subscribe header */
 #subscribe-page #subscribe-header .carousel-text{
-	margin-top: 90px;
+	margin-top: 30px;
 }
 
 #subscribe-page #subscribe-header a{
 	margin-right: 90px;
-	margin-top: 130px;
+	margin-top: 70px;
 }
 
 select.select-grey{
@@ -46,7 +47,8 @@ select.select-grey{
 	font-size: 14px;
 	background-image: none;
 	background-color: #fff;
-	padding:0;
+	padding:4px 0;
+	margin-top: 6px;
 	width: 290px;
 	height: auto;
 }
@@ -69,10 +71,13 @@ select.select-grey{
 	float: left;
 	margin-top: 10px;
 }
-#publications-filter select{
+#publications-filter select, #country-select-box{
 	font-size: 14px;
 }
-
+#country-select-box{
+	padding: 0;
+	height: 36px;
+}
 
 /* Form fixes */
 #application-login-form input[type=email], #application-login-form input[type=password]{

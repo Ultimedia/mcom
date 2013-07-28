@@ -41,7 +41,7 @@
         equalTo: "Passwords do not match",
         require_from_group: "Please enter a valid address"
       });
-      
+
       // Wire resize handler
       resizeHandler();
 
@@ -49,10 +49,22 @@
       detectCurrentPage();
 
       // Activate form validation on global forms
-      $('#login-form').validate();
+      
+      // Login form
+      $('#login-form').validate({
+        submitHandler: function(){
+          // Add the signed-in class to the body to show the dashboard
+          $('body').addClass('signed-in');
+        }
+      });
+      $('#login-form-mobile').validate({
+        submitHandler: function(){
+          $('body').addClass('signed-in');
+        }
+      });
+
       $('#authentication-code-form').validate();
       $('#password-recovery-form').validate();
-      $('#login-form-mobile').validate();
       $('#authentication-code-form-mobile').validate();
       $("#publication-browse").validate();
 
@@ -69,6 +81,7 @@
         });
       });
 
+
     }
 
 
@@ -83,7 +96,7 @@
       switch($('body').attr('id')){
 
         // Home page
-        case "hone-page":
+        case "home-page":
           wireHomePage();
         break;
 
@@ -247,6 +260,13 @@
 
           $('#factsheet').show().css({right:-right}).animate({right:"0"}, 200, function(){
             sidePanelOpen = true;
+            
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+            if(isAndroid) {
+              var windowHeight = $(window).height();
+              $('#factsheet').css({'height': windowHeight + 'px'});
+            }
 
             $('#close-side-panel').css('right',right).show(100);
             $('html, body').css({overflow: "hidden"});
@@ -583,7 +603,7 @@
         submitHandler: function(form){
 
           // Submit the form once the promo code section is valid
-          if(promoCodesValid && !$('#promo-codes-box').hasClass('open')){
+          if(promoCodesValid){
             form.submit();
           }
 
@@ -917,7 +937,7 @@
         switch($('body').attr('id')){
 
           // Home page
-          case "hone-page":
+          case "home-page":
             // Reset the benefits tab section
             $('#audience-nav .tabs').addClass('close').removeClass('open');
           break;
@@ -966,7 +986,7 @@
         switch($('body').attr('id')){
 
           // Home page
-          case "hone-page":
+          case "home-page":
             // Reset the benefits tab section
             $('#audience-nav .tabs').addClass('close').removeClass('open');
           break;
@@ -1013,7 +1033,7 @@
         switch($('body').attr('id')){
 
           // Home page
-          case "hone-page":
+          case "home-page":
 
             // Reset the benefits tab section
             $('#audience-nav .tab-info').removeAttr('style');
@@ -1060,7 +1080,10 @@
       if ( $('.menu:visible').length < 1 ) {
         $('.menu').hide().slideDown(200, function() {
           $('.nav-toggle').toggleClass('active').removeClass('icon-list-mobile').addClass('icon-list-mobile-active');
-          $('#login-options-panel').slideDown(200, function(){ $(this).addClass('open').removeAttr('style'); });
+
+          if(!$('body').hasClass('signed-in')){
+            $('#login-options-panel').slideDown(200, function(){ $(this).addClass('open').removeAttr('style'); });
+          }
         });
       } else {
         $('.menu').stop(true, true).slideUp(200, function() {
